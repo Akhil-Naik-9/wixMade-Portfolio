@@ -171,9 +171,6 @@ export default function HomePage() {
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Tech Stack
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
