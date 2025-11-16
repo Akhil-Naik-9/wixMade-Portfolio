@@ -26,10 +26,10 @@ export default function AboutPage() {
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of California, Berkeley',
-      period: '2020 - 2024',
-      gpa: '3.8/4.0',
+      degree: 'Bachelor of Technology in Computer Science and Engineering',
+      school: 'Sreenidhi Institute of Science and Technology',
+      period: '2023 - 2027 (Expected)',
+      gpa: '7.9/10.0',
       relevant: ['Data Structures', 'Algorithms', 'Web Development', 'Database Systems']
     }
   ];
@@ -219,7 +219,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-right">
                   <p className="font-paragraph text-sm text-foreground/70">{edu.period}</p>
-                  <p className="font-paragraph text-sm text-foreground/70">GPA: {edu.gpa}</p>
+                  <p className="font-paragraph text-sm text-foreground/70">CGPA: {edu.gpa}</p>
                 </div>
               </div>
               
