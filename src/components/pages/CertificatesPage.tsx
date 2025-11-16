@@ -260,13 +260,12 @@ export default function CertificatesPage() {
             Commitment to <span className="text-secondary">Excellence</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 mb-8 leading-relaxed">
-            Each certificate represents not just knowledge gained, but a commitment to maintaining 
-            the highest standards in my professional practice. I believe in validating my skills 
-            through industry-recognized certifications and staying current with evolving technologies.
+            Every certificate shows my commitment to learning and growing as a developer. 
+            I earn these credentials to prove my skills and stay updated with new technologies.
           </p>
           <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-            These credentials demonstrate my dedication to continuous improvement and my ability 
-            to meet the rigorous standards set by leading technology organizations and educational institutions.
+            These achievements show that I'm serious about improving my abilities and 
+            meeting industry standards.
           </p>
         </motion.div>
       </section>
