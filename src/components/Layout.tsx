@@ -3,10 +3,28 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
+import LoadingScreen from '@/components/ui/loading-screen';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
+  const [hasShownLoading, setHasShownLoading] = useState(false);
   const location = useLocation();
+
+  // Show loading screen only once per session
+  useEffect(() => {
+    const hasSeenLoading = sessionStorage.getItem('hasSeenLoadingScreen');
+    if (hasSeenLoading) {
+      setShowLoadingScreen(false);
+      setHasShownLoading(true);
+    }
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setShowLoadingScreen(false);
+    setHasShownLoading(true);
+    sessionStorage.setItem('hasSeenLoadingScreen', 'true');
+  };
 
   // Close menu when route changes
   useEffect(() => {
@@ -23,9 +41,16 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <ScrollToTop />
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 glassmorphism-nav">
+      {/* Loading Screen */}
+      {showLoadingScreen && (
+        <LoadingScreen onComplete={handleLoadingComplete} />
+      )}
+
+      {/* Main App Content */}
+      <div className={showLoadingScreen ? 'hidden' : 'block'}>
+        <ScrollToTop />
+        {/* Header */}
+        <header className="fixed top-0 left-0 right-0 z-50 glassmorphism-nav">
         <nav className="max-w-[120rem] mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -241,6 +266,7 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
