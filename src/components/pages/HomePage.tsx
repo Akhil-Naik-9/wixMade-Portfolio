@@ -65,12 +65,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
               <Link 
                 to="/projects"
+                data-cursor="pointer"
                 className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
               <Link 
                 to="/contact"
+                data-cursor="pointer"
                 className="border border-primary text-primary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/10 transition-colors"
               >
                 Get In Touch
@@ -93,6 +95,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="glassmorphism-card group cursor-pointer"
+            data-cursor="pointer"
           >
             <Link to="/projects" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -116,6 +119,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="glassmorphism-card group cursor-pointer"
+            data-cursor="pointer"
           >
             <Link to="/about" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -141,6 +145,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="glassmorphism-card group cursor-pointer"
+            data-cursor="pointer"
           >
             <Link to="/certificates" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -208,12 +213,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
+              data-cursor="pointer"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors"
             >
               Start a Conversation
             </Link>
             <Link 
               to="/projects"
+              data-cursor="pointer"
               className="border border-secondary text-secondary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors"
             >
               View My Portfolio

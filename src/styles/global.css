@@ -35,3 +35,18 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 255, 198, 0.5);
 }
+
+/* Cursor effects - Hide default cursor on interactive elements */
+* {
+  cursor: none !important;
+}
+
+/* Ensure cursor effects work properly */
+body {
+  cursor: none !important;
+}
+
+/* Special cursor data attributes for enhanced interactions */
+[data-cursor="pointer"] {
+  cursor: none !important;
+}

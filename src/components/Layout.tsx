@@ -4,6 +4,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import LoadingScreen from '@/components/ui/loading-screen';
+import CursorEffects from '@/components/ui/cursor-effects';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,9 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Custom Cursor Effects */}
+      <CursorEffects />
+      
       {/* Loading Screen */}
       {showLoadingScreen && (
         <LoadingScreen onComplete={handleLoadingComplete} />
