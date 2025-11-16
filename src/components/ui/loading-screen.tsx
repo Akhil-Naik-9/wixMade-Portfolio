@@ -167,6 +167,28 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
             </AnimatePresence>
           </div>
 
+          {/* Enter Portfolio Button */}
+          <AnimatePresence>
+            {showEnterButton && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="absolute bottom-20 left-1/2 transform -translate-x-1/2"
+              >
+                <motion.button
+                  onClick={handleEnterClick}
+                  className="px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Enter the Portfolio
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           {/* Floating particles */}
           {[...Array(6)].map((_, i) => (
             <motion.div
