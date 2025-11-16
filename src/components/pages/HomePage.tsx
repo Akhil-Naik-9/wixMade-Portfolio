@@ -204,7 +204,7 @@ export default function HomePage() {
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Let's Build Something Amazing Together
+            Connect Me
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations. 
