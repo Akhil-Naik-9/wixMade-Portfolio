@@ -79,12 +79,13 @@ export default function AboutPage() {
           >
             <div className="glassmorphism-card">
               <Image
-                src={imageError ? "https://static.wixstatic.com/media/e6a693_99e3256982b541c4abe4b3d6e8c1dec7~mv2.png?originWidth=384&originHeight=384" : "https://static.wixstatic.com/media/e6a693_886f93a85b3d4c798499d48c99745822~mv2.jpg"}
+                src={imageError ? "https://static.wixstatic.com/media/e6a693_99e3256982b541c4abe4b3d6e8c1dec7~mv2.png?originWidth=384&originHeight=384" : "https://static.wixstatic.com/media/e6a693_b4b0f7ce9f5d47ecb63841098e35fdaa~mv2.jpg"}
                 alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
-                className="w-full h-96 object-cover object-top scale-110 rounded-xl mb-6"
+                className="w-full h-96 object-cover object-top scale-110 rounded-xl mb-6 border-[0px] border-[undefined] border-none"
                 onError={() => setImageError(true)}
-              />
+                focalPointX={49.999947471937965}
+                focalPointY={47.59764155830116} />
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-foreground/70">
                   <MapPin className="w-4 h-4 text-primary" />
@@ -103,7 +104,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Skills Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -146,7 +146,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
       {/* Experience Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -178,7 +177,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Education Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -242,7 +240,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
       {/* Personal Interests */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
