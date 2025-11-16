@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Briefcase, BookOpen, Award } from 'lucide-react';
+import { ArrowRight, Code, Briefcase, Award } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
 export default function HomePage() {
@@ -133,34 +133,13 @@ export default function HomePage() {
             </Link>
           </motion.div>
 
-          {/* Blog Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glassmorphism-card group cursor-pointer"
-          >
-            <Link to="/blog" className="block h-full">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <BookOpen className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold">Blog</h3>
-              </div>
-              <p className="font-paragraph text-foreground/70 mb-4">
-                Read my thoughts on technology, development practices, and industry trends.
-              </p>
-              <div className="flex items-center text-primary font-paragraph font-medium group-hover:gap-3 transition-all">
-                Read Posts <ArrowRight className="w-4 h-4 ml-2" />
-              </div>
-            </Link>
-          </motion.div>
+
 
           {/* Certificates Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="glassmorphism-card group cursor-pointer"
           >
             <Link to="/certificates" className="block h-full">

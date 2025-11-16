@@ -17,7 +17,6 @@ export default function Layout() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Coursework', href: '/coursework' },
     { name: 'Certificates', href: '/certificates' },
     { name: 'Gallery', href: '/gallery' },
