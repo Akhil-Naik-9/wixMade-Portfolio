@@ -33,10 +33,6 @@ export default function Layout() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             {/* Desktop Navigation */}
-            <Link 
-              to="/" 
-              className="font-heading text-xl text-primary hover:text-primary/80 transition-colors font-normal"
-            >{"A"}</Link>
 
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
@@ -53,7 +49,6 @@ export default function Layout() {
                 </Link>
               ))}
             </div>
-
             {/* Social Links - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
               <a
@@ -82,7 +77,6 @@ export default function Layout() {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
