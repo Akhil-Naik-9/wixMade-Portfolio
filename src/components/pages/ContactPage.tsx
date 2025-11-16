@@ -69,13 +69,13 @@ export default function ContactPage() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/Akhil-Naik-9',
       color: 'hover:text-primary'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/akhil-nenavath-78430a2ba',
       color: 'hover:text-primary'
     },
     {
