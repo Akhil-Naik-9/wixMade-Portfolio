@@ -17,6 +17,7 @@ export default function Layout() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Coursework', href: '/coursework' },
     { name: 'Certificates', href: '/certificates' },
     { name: 'Gallery', href: '/gallery' },
@@ -76,7 +77,7 @@ export default function Layout() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:akhil@example.com"
+                href="mailto:alex@example.com"
                 className="text-foreground/70 hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -140,7 +141,7 @@ export default function Layout() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="mailto:akhil@example.com"
+                    href="mailto:alex@example.com"
                     className="text-foreground/70 hover:text-primary transition-colors"
                     aria-label="Email"
                   >
@@ -162,7 +163,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">{"Akhil Nenavath"}</h3>
+              <h3 className="font-heading text-xl font-bold text-primary mb-4">{"Akhil NenV"}</h3>
               <p className="font-paragraph text-foreground/70 mb-4">
                 Full Stack Developer passionate about creating innovative digital experiences.
               </p>
@@ -186,7 +187,7 @@ export default function Layout() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:akhil@example.com"
+                  href="mailto:alex@example.com"
                   className="text-foreground/70 hover:text-primary transition-colors"
                   aria-label="Email"
                 >
@@ -239,7 +240,9 @@ export default function Layout() {
           </div>
 
           <div className="border-t border-foreground/10 mt-8 pt-8 text-center">
-            <p className="font-paragraph text-foreground/50 text-sm">{"© 2024 Akhil Nenavath. All rights reserved. Built with passion and modern web technologies."}</p>
+            <p className="font-paragraph text-foreground/50 text-sm">
+              © 2024 Alex Chen. All rights reserved. Built with passion and modern web technologies.
+            </p>
           </div>
         </div>
       </footer>

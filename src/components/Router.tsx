@@ -9,6 +9,7 @@ import HomePage from '@/components/pages/HomePage';
 import AboutPage from '@/components/pages/AboutPage';
 import ProjectsPage from '@/components/pages/ProjectsPage';
 import ProjectDetailPage from '@/components/pages/ProjectDetailPage';
+import ProgrammingLanguagesPage from '@/components/pages/ProgrammingLanguagesPage';
 import BlogPage from '@/components/pages/BlogPage';
 import BlogPostPage from '@/components/pages/BlogPostPage';
 import CourseworkPage from '@/components/pages/CourseworkPage';
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "projects/:id",
         element: <ProjectDetailPage />,
+      },
+      {
+        path: "programming-languages",
+        element: <ProgrammingLanguagesPage />,
       },
       {
         path: "blog",
