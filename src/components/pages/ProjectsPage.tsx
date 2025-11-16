@@ -230,16 +230,17 @@ export default function ProjectsPage() {
 
                 {/* Action Buttons */}
                 {(project.liveDemoUrl || project.githubRepoUrl) && (
-                  <div className="flex gap-2 pt-4">
+                  <div className="flex gap-3 pt-4">
                     {project.liveDemoUrl && (
                       <a
                         href={project.liveDemoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 border border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-colors"
-                        aria-label="Live Demo"
+                        data-cursor="pointer"
+                        className="flex items-center gap-2 px-4 py-2 border border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-colors font-paragraph text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
+                        Live Demo
                       </a>
                     )}
                     {project.githubRepoUrl && (
@@ -247,10 +248,11 @@ export default function ProjectsPage() {
                         href={project.githubRepoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 border border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-colors"
-                        aria-label="GitHub Repository"
+                        data-cursor="pointer"
+                        className="flex items-center gap-2 px-4 py-2 border border-foreground/20 text-foreground/70 rounded-lg hover:bg-foreground/5 hover:border-foreground/30 hover:text-foreground transition-colors font-paragraph text-sm font-medium"
                       >
                         <Github className="w-4 h-4" />
+                        View on GitHub
                       </a>
                     )}
                   </div>
