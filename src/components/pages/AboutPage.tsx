@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Download, MapPin, Calendar, Mail, Phone, ExternalLink } from 'lucide-react';
 import { Image } from '@/components/ui/image';
+import { useState } from 'react';
 
 export default function AboutPage() {
+  const [imageError, setImageError] = useState(false);
+  
   const handleDownloadResume = () => {
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
@@ -106,10 +109,11 @@ export default function AboutPage() {
           >
             <div className="glassmorphism-card">
               <Image
-                src="https://static.wixstatic.com/media/e6a693_886f93a85b3d4c798499d48c99745822~mv2.jpg"
+                src={imageError ? "https://static.wixstatic.com/media/e6a693_99e3256982b541c4abe4b3d6e8c1dec7~mv2.png?originWidth=384&originHeight=384" : "https://static.wixstatic.com/media/e6a693_886f93a85b3d4c798499d48c99745822~mv2.jpg"}
                 alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
                 className="w-full h-96 object-cover rounded-xl mb-6"
+                onError={() => setImageError(true)}
               />
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-foreground/70">
