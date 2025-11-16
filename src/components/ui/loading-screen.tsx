@@ -171,7 +171,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 2 }}
-              className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+              className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
             >
               {showEnterButton ? (
                 <motion.button
