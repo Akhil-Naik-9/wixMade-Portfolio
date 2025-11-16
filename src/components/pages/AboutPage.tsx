@@ -163,7 +163,7 @@ export default function AboutPage() {
             Work <span className="text-secondary">Experience</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Ready to begin my professional journey
+            Beginning my professional journey
           </p>
         </motion.div>
 

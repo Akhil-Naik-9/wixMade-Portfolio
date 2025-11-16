@@ -102,7 +102,7 @@ export default function ContactPage() {
             Get In <span className="text-primary">Touch</span>
           </h1>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss your project and explore 
+            Let's discuss your project and explore 
             how we can work together to create something amazing.
           </p>
         </motion.div>
@@ -314,7 +314,7 @@ export default function ContactPage() {
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Project?
+            Let's Work Together
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
             Whether you have a detailed specification or just an idea, I'd love to hear about it. 
