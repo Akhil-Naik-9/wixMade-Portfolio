@@ -89,7 +89,7 @@ export default function AboutPage() {
                 Download Resume
               </button>
               <a 
-                href="mailto:akhil@example.com"
+                href="mailto:naika0362@gmail.com"
                 className="border border-secondary text-secondary px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors flex items-center gap-2 justify-center"
               >
                 <Mail className="w-4 h-4" />
@@ -106,7 +106,7 @@ export default function AboutPage() {
           >
             <div className="glassmorphism-card">
               <Image
-                src="https://static.wixstatic.com/media/e6a693_34f4f9fe7c154faba16c6ce9a75e5294~mv2.png?originWidth=384&originHeight=384"
+                src="https://static.wixstatic.com/media/e6a693_886f93a85b3d4c798499d48c99745822~mv2.jpg"
                 alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
                 className="w-full h-96 object-cover rounded-xl mb-6"
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-foreground/70">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span className="font-paragraph text-sm">San Francisco, CA</span>
+                  <span className="font-paragraph text-sm">Hyderabad, India</span>
                 </div>
                 <div className="flex items-center gap-3 text-foreground/70">
                   <Calendar className="w-4 h-4 text-primary" />
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground/70">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span className="font-paragraph text-sm">akhil@example.com</span>
+                  <span className="font-paragraph text-sm">naika0362@gmail.com</span>
                 </div>
               </div>
             </div>
