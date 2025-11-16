@@ -52,10 +52,6 @@ export default function AboutPage() {
               With a strong foundation in computer science and hands-on experience in modern web technologies, 
               I enjoy solving complex problems and bringing ideas to life through code.
             </p>
-            <p className="font-paragraph text-lg text-foreground/80 mb-8 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-              or sharing my knowledge through blog posts and mentoring fellow developers.
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
