@@ -271,63 +271,7 @@ export default function CertificatesPage() {
         </motion.div>
       </section>
 
-      {/* Skills Validation */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Validated <span className="text-primary">Expertise</span>
-          </h2>
-          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Areas of expertise validated through professional certification programs
-          </p>
-        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { 
-              area: 'Cloud Computing', 
-              description: 'AWS, Azure, and cloud architecture certifications',
-              icon: '☁️'
-            },
-            { 
-              area: 'Web Development', 
-              description: 'Modern frameworks and full-stack development',
-              icon: '🌐'
-            },
-            { 
-              area: 'Data & Analytics', 
-              description: 'Database management and data analysis',
-              icon: '📊'
-            },
-            { 
-              area: 'Security', 
-              description: 'Cybersecurity and secure coding practices',
-              icon: '🔒'
-            }
-          ].map((area, index) => (
-            <motion.div
-              key={area.area}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glassmorphism-card text-center"
-            >
-              <div className="text-3xl mb-4">{area.icon}</div>
-              <h3 className="font-heading text-lg font-semibold mb-3 text-primary">
-                {area.area}
-              </h3>
-              <p className="font-paragraph text-sm text-foreground/70">
-                {area.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

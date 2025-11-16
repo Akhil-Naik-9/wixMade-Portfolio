@@ -4,33 +4,6 @@
  */
 
 /**
- * Collection ID: blogposts
- * Interface for BlogPosts
- */
-export interface BlogPosts {
-  _id: string;
-  _createdDate?: Date;
-  _updatedDate?: Date;
-  /** @wixFieldType text */
-  title?: string;
-  /** @wixFieldType text */
-  slug?: string;
-  /** @wixFieldType text */
-  category?: string;
-  /** @wixFieldType datetime */
-  publicationDate?: Date | string;
-  /** @wixFieldType text */
-  author?: string;
-  /** @wixFieldType image */
-  featuredImage?: string;
-  /** @wixFieldType text */
-  excerpt?: string;
-  /** @wixFieldType text */
-  content?: string;
-}
-
-
-/**
  * Collection ID: certificates
  * Interface for Certificates
  */
@@ -77,31 +50,6 @@ export interface Coursework {
   certificateUrl?: string;
   /** @wixFieldType image */
   courseImage?: string;
-}
-
-
-/**
- * Collection ID: photogalleries
- * Interface for PhotoGalleries
- */
-export interface PhotoGalleries {
-  _id: string;
-  _createdDate?: Date;
-  _updatedDate?: Date;
-  /** @wixFieldType text */
-  galleryName?: string;
-  /** @wixFieldType text */
-  galleryDescription?: string;
-  /** @wixFieldType image */
-  coverImage?: string;
-  /** @wixFieldType image */
-  photoOne?: string;
-  /** @wixFieldType image */
-  photoTwo?: string;
-  /** @wixFieldType image */
-  photoThree?: string;
-  /** @wixFieldType date */
-  datePublished?: Date | string;
 }
 
 
