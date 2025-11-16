@@ -213,9 +213,15 @@ export default function AboutPage() {
                   <h3 className="font-heading text-xl font-semibold text-primary mb-1">
                     {edu.degree}
                   </h3>
-                  <p className="font-paragraph text-lg font-medium text-secondary mb-2">
+                  <a 
+                    href="https://sreenidhi.edu.in/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-paragraph text-lg font-medium text-secondary mb-2 hover:text-secondary/80 transition-colors inline-flex items-center gap-1 group"
+                  >
                     {edu.school}
-                  </p>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
                 </div>
                 <div className="text-right">
                   <p className="font-paragraph text-sm text-foreground/70">{edu.period}</p>
