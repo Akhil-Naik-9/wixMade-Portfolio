@@ -206,10 +206,6 @@ export default function HomePage() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
             Connect Me
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations. 
-            Whether you have a project in mind or just want to connect, I'd love to hear from you.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
