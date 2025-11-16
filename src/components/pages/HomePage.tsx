@@ -175,7 +175,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {[
-            'React', 'Java', 'Core Java', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'PostgreSQL', 'Git', 'Next.js'
+            'React', 'Java', 'Core Java', 'HTML', 'CSS', 'JavaScript', 'SQL', 'Git'
           ].map((skill, index) => (
             <motion.div
               key={skill}
