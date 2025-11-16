@@ -10,7 +10,6 @@ interface LoadingScreenProps {
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [showEnterButton, setShowEnterButton] = useState(false);
 
   const introSteps = [
     {
@@ -44,21 +43,17 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       timers.push(timer);
     });
 
-    // Show enter button after all steps complete
-    const buttonTimer = setTimeout(() => {
-      setShowEnterButton(true);
+    // Auto-complete after all steps finish
+    const autoCompleteTimer = setTimeout(() => {
+      setIsVisible(false);
+      setTimeout(onComplete, 800); // Wait for exit animation
     }, 4500);
-    timers.push(buttonTimer);
+    timers.push(autoCompleteTimer);
 
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
   }, []);
-
-  const handleEnterClick = () => {
-    setIsVisible(false);
-    setTimeout(onComplete, 800); // Wait for exit animation
-  };
 
   return (
     <AnimatePresence>
@@ -166,28 +161,6 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               </motion.div>
             </AnimatePresence>
           </div>
-
-          {/* Enter Portfolio Button */}
-          <AnimatePresence>
-            {showEnterButton && (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="absolute bottom-20 left-1/2 transform -translate-x-1/2"
-              >
-                <motion.button
-                  onClick={handleEnterClick}
-                  className="px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Enter the Portfolio
-                </motion.button>
-              </motion.div>
-            )}
-          </AnimatePresence>
 
           {/* Floating particles */}
           {[...Array(6)].map((_, i) => (
