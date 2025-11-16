@@ -94,10 +94,7 @@ export default function ProjectsPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            A collection of web applications, mobile apps, and creative coding projects 
-            that showcase my skills and passion for development.
-          </p>
+          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">{"A collection of web applications and creative coding projects that showcase my skills and passion for development."}</p>
         <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
             My <span className="text-primary">Projects</span>
           </h1>
