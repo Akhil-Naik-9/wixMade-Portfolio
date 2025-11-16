@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Globe } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import LoadingScreen from '@/components/ui/loading-screen';
@@ -62,7 +63,13 @@ export default function Layout() {
               to="/" 
               className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors flex items-center space-x-2"
             >
-              <Globe className="w-6 h-6" />
+              <Image 
+                src="https://static.wixstatic.com/media/e6a693_cd0a358e5da4470e9b2d9902a0701688~mv2.png"
+                alt="Akhil Nenavath Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full"
+              />
               <span>Akhil Nenavath</span>
             </Link>
 
@@ -191,7 +198,13 @@ export default function Layout() {
             {/* Brand */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Globe className="w-6 h-6 text-primary" />
+                <Image 
+                  src="https://static.wixstatic.com/media/e6a693_cd0a358e5da4470e9b2d9902a0701688~mv2.png"
+                  alt="Akhil Nenavath Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 rounded-full"
+                />
                 <h3 className="font-heading text-xl font-bold text-primary">Akhil Nenavath</h3>
               </div>
               <p className="font-paragraph text-foreground/70 mb-4">
