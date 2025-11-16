@@ -229,14 +229,8 @@ export default function ProjectsPage() {
                 )}
 
                 {/* Action Buttons */}
-                <div className="flex gap-3 pt-4">
-                  <Link
-                    to={`/projects/${project._id}`}
-                    className="flex-1 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-paragraph text-sm font-medium hover:bg-primary/90 transition-colors text-center"
-                  >
-                    View Details
-                  </Link>
-                  <div className="flex gap-2">
+                {(project.liveDemoUrl || project.githubRepoUrl) && (
+                  <div className="flex gap-2 pt-4">
                     {project.liveDemoUrl && (
                       <a
                         href={project.liveDemoUrl}
@@ -260,7 +254,7 @@ export default function ProjectsPage() {
                       </a>
                     )}
                   </div>
-                </div>
+                )}
               </div>
             </motion.div>
           ))}
