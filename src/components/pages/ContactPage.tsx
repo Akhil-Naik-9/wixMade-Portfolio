@@ -41,8 +41,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex@example.com',
-      href: 'mailto:alex@example.com'
+      value: 'akhil@example.com',
+      href: 'mailto:akhil@example.com'
     },
     {
       icon: Phone,
@@ -382,7 +382,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:alex@example.com"
+              href="mailto:akhil@example.com"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />

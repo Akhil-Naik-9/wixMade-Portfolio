@@ -76,7 +76,7 @@ export default function AboutPage() {
                 Download Resume
               </button>
               <a 
-                href="mailto:alex@example.com"
+                href="mailto:akhil@example.com"
                 className="border border-secondary text-secondary px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors flex items-center gap-2 justify-center"
               >
                 <Mail className="w-4 h-4" />
@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div className="glassmorphism-card">
               <Image
                 src="https://static.wixstatic.com/media/e6a693_34f4f9fe7c154faba16c6ce9a75e5294~mv2.png?originWidth=384&originHeight=384"
-                alt="Alex Chen - Full Stack Developer"
+                alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
                 className="w-full h-96 object-cover rounded-xl mb-6"
               />
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground/70">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span className="font-paragraph text-sm">alex@example.com</span>
+                  <span className="font-paragraph text-sm">akhil@example.com</span>
                 </div>
               </div>
             </div>

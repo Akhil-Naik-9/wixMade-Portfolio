@@ -77,7 +77,7 @@ export default function Layout() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:alex@example.com"
+                href="mailto:akhil@example.com"
                 className="text-foreground/70 hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -141,7 +141,7 @@ export default function Layout() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="mailto:alex@example.com"
+                    href="mailto:akhil@example.com"
                     className="text-foreground/70 hover:text-primary transition-colors"
                     aria-label="Email"
                   >
@@ -187,7 +187,7 @@ export default function Layout() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:alex@example.com"
+                  href="mailto:akhil@example.com"
                   className="text-foreground/70 hover:text-primary transition-colors"
                   aria-label="Email"
                 >
