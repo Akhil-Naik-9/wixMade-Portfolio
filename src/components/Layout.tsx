@@ -266,7 +266,7 @@ export default function Layout() {
           </div>
 
           <div className="border-t border-foreground/10 mt-8 pt-8 text-center">
-            <p className="font-paragraph text-foreground/50 text-sm">{"© 2024 Akhil Nenavath. All rights reserved. Built with passion and modern web technologies."}</p>
+            <p className="font-paragraph text-foreground/50 text-sm">{"© 2025 Akhil Nenavath. All rights reserved. Built with passion and modern web technologies."}</p>
           </div>
         </div>
       </footer>
