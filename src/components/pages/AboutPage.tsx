@@ -22,32 +22,7 @@ export default function AboutPage() {
     tools: ['Git', 'AWS', 'VS Code']
   };
 
-  const experience = [
-    {
-      title: 'Frontend Developer',
-      company: 'TechCorp Solutions',
-      period: '2023 - Present',
-      location: 'San Francisco, CA',
-      description: 'Developing responsive web applications using React and TypeScript. Collaborated with design teams to implement pixel-perfect UI components.',
-      achievements: [
-        'Improved application performance by 40% through code optimization',
-        'Led the migration from JavaScript to TypeScript',
-        'Mentored 3 junior developers'
-      ]
-    },
-    {
-      title: 'Full Stack Developer Intern',
-      company: 'StartupXYZ',
-      period: '2022 - 2023',
-      location: 'Remote',
-      description: 'Built full-stack applications using MERN stack. Worked on both frontend and backend development.',
-      achievements: [
-        'Developed 5+ feature-complete web applications',
-        'Implemented automated testing reducing bugs by 60%',
-        'Contributed to open-source projects'
-      ]
-    }
-  ];
+  const experience = [];
 
   const education = [
     {
@@ -188,51 +163,23 @@ export default function AboutPage() {
             Work <span className="text-secondary">Experience</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Professional journey and key accomplishments
+            Ready to begin my professional journey
           </p>
         </motion.div>
 
-        <div className="space-y-8">
-          {experience.map((job, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="glassmorphism-card"
-            >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-xl font-semibold text-primary mb-1">
-                    {job.title}
-                  </h3>
-                  <p className="font-paragraph text-lg font-medium text-secondary mb-2">
-                    {job.company}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="font-paragraph text-sm text-foreground/70">{job.period}</p>
-                  <p className="font-paragraph text-sm text-foreground/70">{job.location}</p>
-                </div>
-              </div>
-              
-              <p className="font-paragraph text-foreground/80 mb-4">
-                {job.description}
-              </p>
-              
-              <div>
-                <h4 className="font-paragraph font-semibold text-foreground mb-2">Key Achievements:</h4>
-                <ul className="space-y-1">
-                  {job.achievements.map((achievement, i) => (
-                    <li key={i} className="font-paragraph text-sm text-foreground/70 flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="glassmorphism-card text-center"
+          >
+            <p className="font-paragraph text-lg text-foreground/80 leading-relaxed">
+              I'm a fresher looking forward to starting my professional journey in software development. 
+              I'm eager to apply my academic knowledge and skills to real-world projects and contribute 
+              to innovative solutions while continuing to learn and grow in the field.
+            </p>
+          </motion.div>
         </div>
       </section>
 
