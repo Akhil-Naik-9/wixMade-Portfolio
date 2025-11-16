@@ -28,7 +28,22 @@ export default function ProjectsPage() {
     try {
       setIsLoading(true);
       const { items } = await BaseCrudService.getAll<Projects>('projects');
-      setProjects(items);
+      
+      // Filter out specific projects that should not be displayed
+      const projectsToExclude = [
+        'Image Gallery',
+        'Product Landing Page', 
+        'Interactive Quiz Application',
+        'Weather Dashboard'
+      ];
+      
+      const filteredItems = items.filter(project => 
+        !projectsToExclude.some(excludedName => 
+          project.projectName?.toLowerCase().includes(excludedName.toLowerCase())
+        )
+      );
+      
+      setProjects(filteredItems);
     } catch (error) {
       console.error('Error loading projects:', error);
     } finally {
