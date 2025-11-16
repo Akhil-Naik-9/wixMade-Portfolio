@@ -112,7 +112,7 @@ export default function AboutPage() {
                 src={imageError ? "https://static.wixstatic.com/media/e6a693_99e3256982b541c4abe4b3d6e8c1dec7~mv2.png?originWidth=384&originHeight=384" : "https://static.wixstatic.com/media/e6a693_886f93a85b3d4c798499d48c99745822~mv2.jpg"}
                 alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
-                className="w-full h-96 object-cover rounded-xl mb-6"
+                className="w-full h-96 object-cover object-top scale-110 rounded-xl mb-6"
                 onError={() => setImageError(true)}
               />
               <div className="space-y-3">
