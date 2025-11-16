@@ -12,7 +12,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -24,8 +24,15 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:naika0362@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -41,20 +48,20 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'akhil@example.com',
-      href: 'mailto:akhil@example.com'
+      value: 'naika0362@gmail.com',
+      href: 'mailto:naika0362@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 9908988488',
+      href: 'tel:+919908988488'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com/?q=San+Francisco,+CA'
+      value: 'Hyderabad, India',
+      href: 'https://maps.google.com/?q=Hyderabad,+India'
     }
   ];
 
@@ -79,16 +86,7 @@ export default function ContactPage() {
     }
   ];
 
-  const projectTypes = [
-    'Web Application Development',
-    'Mobile App Development',
-    'API Development',
-    'Database Design',
-    'UI/UX Consultation',
-    'Code Review & Optimization',
-    'Technical Consulting',
-    'Other'
-  ];
+// ... keep existing code (imports and component setup)
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -174,22 +172,17 @@ export default function ContactPage() {
 
                 <div>
                   <label htmlFor="subject" className="block font-paragraph text-sm font-medium mb-2">
-                    Project Type
+                    Subject
                   </label>
-                  <select
+                  <input
+                    type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
-                  >
-                    <option value="">Select a project type</option>
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type} className="bg-background">
-                        {type}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="What's this about?"
+                  />
                 </div>
 
                 <div>
@@ -312,59 +305,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Frequently Asked <span className="text-primary">Questions</span>
-          </h2>
-          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            Common questions about working together and my development process
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              question: "What's your typical project timeline?",
-              answer: "Project timelines vary based on complexity, but most web applications take 4-8 weeks from concept to deployment. I'll provide a detailed timeline after understanding your requirements."
-            },
-            {
-              question: "Do you work with existing teams?",
-              answer: "Absolutely! I enjoy collaborating with existing development teams, designers, and stakeholders. I can integrate seamlessly into your workflow and development processes."
-            },
-            {
-              question: "What technologies do you specialize in?",
-              answer: "I specialize in React, TypeScript, Node.js, and modern web technologies. I'm also experienced with cloud platforms like AWS and various databases including PostgreSQL and MongoDB."
-            },
-            {
-              question: "How do you handle project communication?",
-              answer: "I believe in transparent communication with regular updates, progress reports, and scheduled check-ins. I'm flexible with communication tools and can adapt to your preferred workflow."
-            }
-          ].map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glassmorphism-card"
-            >
-              <h3 className="font-heading text-lg font-semibold mb-3 text-primary">
-                {faq.question}
-              </h3>
-              <p className="font-paragraph text-foreground/80 leading-relaxed">
-                {faq.answer}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -382,14 +322,14 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:akhil@example.com"
+              href="mailto:naika0362@gmail.com"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
               Email Me Directly
             </a>
             <a
-              href="tel:+15551234567"
+              href="tel:+919908988488"
               className="border border-secondary text-secondary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Phone className="w-4 h-4" />
