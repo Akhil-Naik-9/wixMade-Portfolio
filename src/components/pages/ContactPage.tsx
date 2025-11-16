@@ -184,7 +184,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:naika0362@gmail.com"
+              href="mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
