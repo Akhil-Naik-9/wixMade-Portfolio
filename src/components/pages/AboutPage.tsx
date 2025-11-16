@@ -17,10 +17,9 @@ export default function AboutPage() {
   };
 
   const skills = {
-    frontend: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Framer Motion'],
-    backend: ['Node.js', 'Express', 'Python', 'Django', 'PostgreSQL', 'MongoDB'],
-    tools: ['Git', 'Docker', 'AWS', 'Figma', 'VS Code', 'Postman'],
-    concepts: ['RESTful APIs', 'GraphQL', 'Microservices', 'CI/CD', 'Agile', 'TDD']
+    frontend: ['HTML5', 'CSS', 'JavaScript'],
+    backend: ['Java', 'Core Java', 'MongoDB'],
+    tools: ['Git', 'AWS', 'VS Code']
   };
 
   const experience = [
@@ -150,7 +149,7 @@ export default function AboutPage() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {Object.entries(skills).map(([category, skillList], index) => (
             <motion.div
               key={category}
