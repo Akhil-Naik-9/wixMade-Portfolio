@@ -3,6 +3,16 @@ import { Download, MapPin, Calendar, Mail, Phone, ExternalLink } from 'lucide-re
 import { Image } from '@/components/ui/image';
 
 export default function AboutPage() {
+  const handleDownloadResume = () => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Path to resume file in public directory
+    link.download = 'Akhil_Nenavath_Resume.pdf'; // Downloaded filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const skills = {
     frontend: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Framer Motion'],
     backend: ['Node.js', 'Express', 'Python', 'Django', 'PostgreSQL', 'MongoDB'],
@@ -71,7 +81,10 @@ export default function AboutPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors flex items-center gap-2">
+              <button 
+                onClick={handleDownloadResume}
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
+              >
                 <Download className="w-4 h-4" />
                 Download Resume
               </button>
