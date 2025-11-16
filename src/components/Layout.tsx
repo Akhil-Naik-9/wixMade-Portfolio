@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
+import { Image } from '@/components/ui/image';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,13 +29,22 @@ export default function Layout() {
       <header className="fixed top-0 left-0 right-0 z-50 glassmorphism-nav">
         <nav className="max-w-[120rem] mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link 
-              to="/" 
-              className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors"
-            >
-              Akhil Nenavath
-            </Link>
+            {/* Logo with Profile Image */}
+            <div className="flex items-center gap-3">
+              <Image 
+                src="https://static.wixstatic.com/media/e6a693_762f49808743475099997791756d6937~mv2.png"
+                alt="Akhil Nenavath Profile"
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
+              <Link 
+                to="/" 
+                className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors"
+              >
+                Akhil Nenavath
+              </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -158,9 +168,18 @@ export default function Layout() {
       <footer className="bg-background border-t border-foreground/10 mt-20">
         <div className="max-w-[120rem] mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Brand */}
+            {/* Brand with Profile Image */}
+            <div className="flex items-center gap-3 mb-4">
+              <Image 
+                src="https://static.wixstatic.com/media/e6a693_762f49808743475099997791756d6937~mv2.png"
+                alt="Akhil Nenavath Profile"
+                width={48}
+                height={48}
+                className="rounded-full object-cover"
+              />
+              <h3 className="font-heading text-xl font-bold text-primary">{"Akhil Nenavath"}</h3>
+            </div>
             <div>
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">{"Akhil Nenavath"}</h3>
               <p className="font-paragraph text-foreground/70 mb-4">
                 Full Stack Developer passionate about creating innovative digital experiences.
               </p>
