@@ -150,7 +150,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-xl font-semibold">Certificates</h3>
               </div>
               <p className="font-paragraph text-foreground/70 mb-4">
-                View my professional certifications and completed coursework.
+                View my professional certifications and achievements.
               </p>
               <div className="flex items-center text-secondary font-paragraph font-medium group-hover:gap-3 transition-all">
                 View Credentials <ArrowRight className="w-4 h-4 ml-2" />

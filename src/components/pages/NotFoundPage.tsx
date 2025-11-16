@@ -20,7 +20,7 @@ export default function NotFoundPage() {
   const popularLinks = [
     { name: 'Projects', href: '/projects', description: 'View my latest work' },
     { name: 'About', href: '/about', description: 'Learn more about me' },
-    { name: 'Blog', href: '/blog', description: 'Read my articles' },
+    { name: 'Projects', href: '/projects', description: 'View my work' },
     { name: 'Contact', href: '/contact', description: 'Get in touch' }
   ];
 
@@ -147,10 +147,10 @@ export default function NotFoundPage() {
               Browse Projects
             </Link>
             <Link
-              to="/blog"
+              to="/certificates"
               className="flex-1 bg-foreground/5 hover:bg-primary/10 px-4 py-3 rounded-lg font-paragraph text-sm transition-colors text-center"
             >
-              Read Blog Posts
+              View Certificates
             </Link>
           </div>
         </motion.div>

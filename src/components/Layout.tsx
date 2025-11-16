@@ -17,10 +17,7 @@ export default function Layout() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Coursework', href: '/coursework' },
     { name: 'Certificates', href: '/certificates' },
-    { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -200,7 +197,7 @@ export default function Layout() {
             <div>
               <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                {navigation.slice(0, 4).map((item) => (
+                {navigation.slice(0, 3).map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.href}
@@ -217,7 +214,7 @@ export default function Layout() {
             <div>
               <h4 className="font-heading text-lg font-semibold mb-4">More</h4>
               <ul className="space-y-2">
-                {navigation.slice(4).map((item) => (
+                {navigation.slice(3).map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.href}

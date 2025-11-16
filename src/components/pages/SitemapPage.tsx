@@ -40,8 +40,7 @@ export default function SitemapPage() {
       icon: BookOpen,
       color: 'text-primary',
       pages: [
-        { name: 'Blog', path: '/blog', description: 'Technical articles and insights' },
-        { name: 'Blog Posts', path: '/blog/[id]', description: 'Individual blog post pages' }
+        { name: 'Programming Languages', path: '/programming-languages', description: 'Technologies and languages I work with' },
       ]
     },
     {
@@ -49,17 +48,7 @@ export default function SitemapPage() {
       icon: GraduationCap,
       color: 'text-secondary',
       pages: [
-        { name: 'Coursework', path: '/coursework', description: 'Academic courses and training' },
         { name: 'Certificates', path: '/certificates', description: 'Professional certifications' }
-      ]
-    },
-    {
-      title: 'Media',
-      icon: ImageIcon,
-      color: 'text-primary',
-      pages: [
-        { name: 'Gallery', path: '/gallery', description: 'Photo collections and visual content' },
-        { name: 'Gallery Details', path: '/gallery/[id]', description: 'Individual gallery pages' }
       ]
     },
     {
