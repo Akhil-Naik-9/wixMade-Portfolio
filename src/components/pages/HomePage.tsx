@@ -22,7 +22,7 @@ export default function HomePage() {
     }
   };
 
-  const name = "Alex Chen";
+  const name = "Akhil Nenavath";
   const title = "Full Stack Developer";
 
   return (
