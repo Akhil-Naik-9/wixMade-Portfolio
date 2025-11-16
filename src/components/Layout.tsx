@@ -68,7 +68,7 @@ export default function Layout() {
                 alt="Akhil Nenavath Logo"
                 width={32}
                 height={32}
-                className="w-8 h-8 rounded-full"
+                className="w-8 h-8 rounded-full object-cover"
               />
               <span>Akhil Nenavath</span>
             </Link>
@@ -203,7 +203,7 @@ export default function Layout() {
                   alt="Akhil Nenavath Logo"
                   width={32}
                   height={32}
-                  className="w-8 h-8 rounded-full"
+                  className="w-8 h-8 rounded-full object-cover"
                 />
                 <h3 className="font-heading text-xl font-bold text-primary">Akhil Nenavath</h3>
               </div>
