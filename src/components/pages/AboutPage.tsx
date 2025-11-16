@@ -48,9 +48,9 @@ export default function AboutPage() {
               About <span className="text-primary">Me</span>
             </h1>
             <p className="font-paragraph text-lg text-foreground/80 mb-8 leading-relaxed">
-              I'm a passionate full-stack developer with a love for creating innovative digital experiences. 
-              With a strong foundation in computer science and hands-on experience in modern web technologies, 
-              I enjoy solving complex problems and bringing ideas to life through code.
+              I'm a computer science student who loves building websites and apps. 
+              I enjoy learning new technologies and turning creative ideas into working software. 
+              My goal is to create digital solutions that are both useful and easy to use.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
