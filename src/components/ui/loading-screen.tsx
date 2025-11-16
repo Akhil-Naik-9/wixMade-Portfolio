@@ -10,6 +10,7 @@ interface LoadingScreenProps {
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [showEnterButton, setShowEnterButton] = useState(false);
 
   const introSteps = [
     {
@@ -43,17 +44,21 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       timers.push(timer);
     });
 
-    // Hide loading screen after all steps
-    const finalTimer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(onComplete, 800); // Wait for exit animation
+    // Show enter button after all steps complete
+    const buttonTimer = setTimeout(() => {
+      setShowEnterButton(true);
     }, 4500);
-    timers.push(finalTimer);
+    timers.push(buttonTimer);
 
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
-  }, [onComplete]);
+  }, []);
+
+  const handleEnterClick = () => {
+    setIsVisible(false);
+    setTimeout(onComplete, 800); // Wait for exit animation
+  };
 
   return (
     <AnimatePresence>
@@ -161,18 +166,31 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               </motion.div>
             </AnimatePresence>
 
-            {/* Loading animation */}
+            {/* Loading animation - Replace with Enter button when ready */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 2 }}
               className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
             >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full"
-              />
+              {showEnterButton ? (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={handleEnterClick}
+                  className="px-8 py-3 bg-primary text-primary-foreground font-heading font-semibold rounded-lg border border-primary/20 hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-primary/25"
+                >
+                  Enter Portfolio
+                </motion.button>
+              ) : (
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full"
+                />
+              )}
             </motion.div>
           </div>
 
