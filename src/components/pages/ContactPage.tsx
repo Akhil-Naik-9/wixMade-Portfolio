@@ -101,10 +101,29 @@ export default function ContactPage() {
           <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
             Get In <span className="text-primary">Touch</span>
           </h1>
-          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
             Let's discuss your project and explore 
             how we can work together to create something amazing.
           </p>
+          
+          {/* Quick Email CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-8"
+          >
+            <a
+              href="mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-paragraph font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
+            >
+              <Mail className="w-5 h-5" />
+              Email Me Now
+            </a>
+            <p className="font-paragraph text-sm text-foreground/60 mt-3">
+              Click to open your email client with a pre-filled message
+            </p>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
