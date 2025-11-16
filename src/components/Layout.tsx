@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import LoadingScreen from '@/components/ui/loading-screen';
@@ -60,9 +60,10 @@ export default function Layout() {
             {/* Logo */}
             <Link 
               to="/" 
-              className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors"
+              className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors flex items-center space-x-2"
             >
-              Akhil Nenavath
+              <Globe className="w-6 h-6" />
+              <span>Akhil Nenavath</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -189,7 +190,10 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">{"Akhil Nenavath"}</h3>
+              <div className="flex items-center space-x-2 mb-4">
+                <Globe className="w-6 h-6 text-primary" />
+                <h3 className="font-heading text-xl font-bold text-primary">Akhil Nenavath</h3>
+              </div>
               <p className="font-paragraph text-foreground/70 mb-4">
                 Full Stack Developer passionate about creating innovative digital experiences.
               </p>
