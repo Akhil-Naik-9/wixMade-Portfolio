@@ -1,48 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Clock, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:naika0362@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
-  };
 
   const contactInfo = [
     {
@@ -86,8 +45,6 @@ export default function ContactPage() {
     }
   ];
 
-// ... keep existing code (imports and component setup)
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -126,126 +83,12 @@ export default function ContactPage() {
           </motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="glassmorphism-card"
-          >
-            <h2 className="font-heading text-2xl font-semibold mb-6 text-primary">
-              Send a Message
-            </h2>
-            
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-8"
-              >
-                <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold mb-2 text-primary">
-                  Message Sent!
-                </h3>
-                <p className="font-paragraph text-foreground/70">
-                  Thank you for reaching out. I'll get back to you within 24 hours.
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block font-paragraph text-sm font-medium mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block font-paragraph text-sm font-medium mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block font-paragraph text-sm font-medium mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block font-paragraph text-sm font-medium mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary transition-colors resize-vertical"
-                    placeholder="Tell me about your project, timeline, and any specific requirements..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-          </motion.div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
             {/* Contact Details */}
