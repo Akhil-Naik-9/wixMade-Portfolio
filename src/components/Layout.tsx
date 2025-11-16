@@ -32,8 +32,14 @@ export default function Layout() {
         <nav className="max-w-[120rem] mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            {/* Desktop Navigation */}
+            <Link 
+              to="/" 
+              className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors"
+            >
+              Akhil Nenavath
+            </Link>
 
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <Link
@@ -49,6 +55,7 @@ export default function Layout() {
                 </Link>
               ))}
             </div>
+
             {/* Social Links - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
               <a
@@ -77,6 +84,7 @@ export default function Layout() {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -155,7 +163,9 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">{"Akhil Nenavath"}</h3>
+              <h3 className="font-heading text-xl font-bold text-primary mb-4">
+                Alex Chen
+              </h3>
               <p className="font-paragraph text-foreground/70 mb-4">
                 Full Stack Developer passionate about creating innovative digital experiences.
               </p>
@@ -232,7 +242,9 @@ export default function Layout() {
           </div>
 
           <div className="border-t border-foreground/10 mt-8 pt-8 text-center">
-            <p className="font-paragraph text-foreground/50 text-sm">{"© 2024 Akhil . All rights reserved. Built with passion and modern web technologies."}</p>
+            <p className="font-paragraph text-foreground/50 text-sm">
+              © 2024 Alex Chen. All rights reserved. Built with passion and modern web technologies.
+            </p>
           </div>
         </div>
       </footer>
