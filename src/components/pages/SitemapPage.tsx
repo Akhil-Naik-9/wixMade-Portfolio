@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Home, 
   User, 
+  Users,
   Code, 
   BookOpen, 
   GraduationCap, 
@@ -131,13 +132,13 @@ export default function SitemapPage() {
           </div>
           
           <div className="glassmorphism-card text-center">
-            <div className="p-3 bg-secondary/10 rounded-lg w-fit mx-auto mb-4">
-              <Calendar className="w-6 h-6 text-secondary" />
+            <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
+              <Users className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-heading text-2xl font-bold text-secondary mb-2">
-              2024
+            <h3 className="font-heading text-2xl font-bold text-primary mb-2">
+              42
             </h3>
-            <p className="font-paragraph text-foreground/70">Last Updated</p>
+            <p className="font-paragraph text-foreground/70">Live Visitors</p>
           </div>
         </motion.div>
 
