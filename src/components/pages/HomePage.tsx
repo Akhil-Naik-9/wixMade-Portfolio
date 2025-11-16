@@ -70,13 +70,13 @@ export default function HomePage() {
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link 
-                to="/contact"
+              <a 
+                href="mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards"
                 data-cursor="pointer"
                 className="border border-primary text-primary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/10 transition-colors"
               >
                 Get In Touch
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
