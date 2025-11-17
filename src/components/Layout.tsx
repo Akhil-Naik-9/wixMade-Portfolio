@@ -110,13 +110,13 @@ export default function Layout() {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="mailto:naika0362@gmail.com"
+              <Link
+                to="/contact#get-in-touch"
                 className="text-foreground/70 hover:text-cyber-orange transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -174,13 +174,13 @@ export default function Layout() {
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a
-                    href="mailto:naika0362@gmail.com"
+                  <Link
+                    to="/contact#get-in-touch"
                     className="text-foreground/70 hover:text-cyber-orange transition-colors"
                     aria-label="Email"
                   >
                     <Mail className="w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -229,13 +229,13 @@ export default function Layout() {
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a
-                  href="mailto:naika0362@gmail.com"
+                <Link
+                  to="/contact#get-in-touch"
                   className="text-foreground/70 hover:text-cyber-orange transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
-                </a>
+                </Link>
               </div>
             </div>
 

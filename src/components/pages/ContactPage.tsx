@@ -50,7 +50,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
+      <section id="get-in-touch" className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
