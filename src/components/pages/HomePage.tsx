@@ -168,16 +168,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Skills Showcase */}
+      {/* Profile Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
+        {/* Heading above photo */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent">
-            Tech Stack
+          <h2 className="font-heading text-4xl md:text-5xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent">
+            I'm Akhil Nenavath
           </h2>
         </motion.div>
 
@@ -186,7 +187,7 @@ export default function HomePage() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center mb-16"
+          className="flex justify-center mb-20"
         >
           <div className="relative group">
             {/* Glowing border effect */}
@@ -206,6 +207,18 @@ export default function HomePage() {
               <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-neon-green to-electric-blue rounded-full animate-bounce delay-300"></div>
             </div>
           </div>
+        </motion.div>
+
+        {/* Tech Stack Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent">
+            Tech Stack
+          </h3>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
