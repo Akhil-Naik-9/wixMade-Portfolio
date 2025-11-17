@@ -59,13 +59,13 @@ export default function AboutPage() {
                 <Eye className="w-4 h-4" />
                 View Resume
               </Link>
-              <a 
-                href="mailto:naika0362@gmail.com"
+              <Link 
+                to="/contact"
                 className="border border-secondary text-secondary px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors flex items-center gap-2 justify-center"
               >
                 <Mail className="w-4 h-4" />
                 Get In Touch
-              </a>
+              </Link>
             </div>
           </motion.div>
 
