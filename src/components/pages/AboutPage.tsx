@@ -328,17 +328,16 @@ Seeking opportunities to apply my technical skills and passion for software deve
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Beyond <span className="text-secondary">Coding</span>
+            Beyond Coding / <span className="text-secondary">Hobbies</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 mb-8 leading-relaxed">
-            When I'm not immersed in code, I enjoy photography, hiking in the Bay Area trails, 
-            playing chess, and experimenting with new cooking recipes. I'm also passionate about 
-            contributing to open-source projects and staying up-to-date with the latest tech trends 
-            through podcasts and tech conferences.
+            When I'm not coding, I like taking photos, playing chess, and trying new recipes. 
+            I also enjoy working on open-source projects and learning about new technology 
+            through podcasts and tech events.
           </p>
           <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-            I believe that diverse interests and experiences make me a better developer, 
-            bringing fresh perspectives to problem-solving and creative thinking.
+            Having different hobbies helps me think better and solve problems in new ways 
+            when I'm programming.
           </p>
         </motion.div>
       </section>
