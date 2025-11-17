@@ -7,13 +7,85 @@ export default function AboutPage() {
   const [imageError, setImageError] = useState(false);
   
   const handleDownloadResume = () => {
+    // Create resume content as a .docx file
+    const resumeContent = `
+AKHIL NENAVATH
+Full Stack Developer
+
+Contact Information:
+Email: naika0362@gmail.com
+Location: Hyderabad, India
+Phone: Available upon request
+
+EDUCATION
+Bachelor of Technology in Computer Science and Engineering
+Sreenidhi Institute of Science and Technology
+2023 - 2027 (Expected)
+CGPA: 7.9/10.0
+
+Relevant Coursework:
+• Data Structures and Algorithms
+• Web Development
+• Database Systems
+• Software Engineering
+
+TECHNICAL SKILLS
+Frontend Development:
+• HTML5, CSS3, JavaScript
+• React.js, Modern UI/UX Design
+• Responsive Web Design
+
+Backend Development:
+• Java, Core Java
+• MongoDB Database
+• RESTful API Development
+
+Tools & Technologies:
+• Git Version Control
+• AWS Cloud Services
+• VS Code IDE
+• Agile Development
+
+PROJECTS
+Portfolio Website
+• Developed a responsive personal portfolio using React and modern web technologies
+• Implemented dynamic content management with CMS integration
+• Features project showcases, certificate displays, and contact functionality
+
+Web Applications
+• Built various web applications demonstrating full-stack development skills
+• Utilized modern frameworks and best practices for scalable solutions
+• Focus on user experience and performance optimization
+
+CERTIFICATIONS
+• Various technical certifications in web development and programming
+• Continuous learning through online platforms and courses
+
+PERSONAL INTERESTS
+• Photography and creative visual arts
+• Open-source project contributions
+• Technology trend research and development
+• Problem-solving and algorithmic thinking
+
+CAREER OBJECTIVE
+Seeking opportunities to apply my technical skills and passion for software development in a dynamic environment. Eager to contribute to innovative projects while continuing to learn and grow as a professional developer.
+`;
+
+    // Create a blob with the resume content
+    const blob = new Blob([resumeContent], { 
+      type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' 
+    });
+    
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Path to resume file in public directory
-    link.download = 'Akhil_Nenavath_Resume.pdf'; // Downloaded filename
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Akhil_Nenavath_Resume.docx';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    // Clean up the object URL
+    URL.revokeObjectURL(link.href);
   };
 
   const skills = {
