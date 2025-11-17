@@ -1,9 +1,20 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Clock, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [showContactInfo, setShowContactInfo] = useState(false);
+
+  const scrollToContactInfo = () => {
+    setShowContactInfo(true);
+    // Small delay to ensure the element is rendered before scrolling
+    setTimeout(() => {
+      const contactInfoElement = document.getElementById('contact-information');
+      if (contactInfoElement) {
+        contactInfoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+  };
 
   const contactInfo = [
     {
@@ -40,9 +51,9 @@ export default function ContactPage() {
       color: 'hover:text-primary'
     },
     {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com',
+      icon: Instagram,
+      label: 'Instagram',
+      href: 'https://www.instagram.com/_akhil_devarakonda_?igsh=MTg0NHk3bW9ybjBxaw==',
       color: 'hover:text-primary'
     }
   ];
@@ -75,7 +86,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="glassmorphism-card">
+              <div id="contact-information" className="glassmorphism-card">
                 <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
                   Contact Information
                 </h3>
@@ -203,13 +214,13 @@ export default function ContactPage() {
             Let's schedule a call to discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards"
+            <button
+              onClick={scrollToContactInfo}
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
               Email Me Directly
-            </a>
+            </button>
             <a
               href="tel:+919908988488"
               className="border border-secondary text-secondary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors inline-flex items-center gap-2 justify-center"
