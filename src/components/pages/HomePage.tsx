@@ -72,7 +72,7 @@ export default function HomePage() {
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
               <Link 
-                to="/about"
+                to="/contact"
                 data-cursor="pointer"
                 className="border-2 border-transparent bg-gradient-to-r from-cyber-orange to-neon-green bg-clip-border text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:shadow-lg hover:shadow-cyber-orange/25 transition-all relative overflow-hidden group"
               >
@@ -89,10 +89,11 @@ export default function HomePage() {
               className="mt-16"
             >
               {/* Heading above photo */}
-              <div className="text-center mb-8">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent">
+              <div className="text-center mb-12">
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent drop-shadow-lg">
                   I'm Akhil Nenavath
                 </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-electric-purple to-hot-pink mx-auto mt-4 rounded-full"></div>
               </div>
 
               {/* Highlighted Profile Image */}

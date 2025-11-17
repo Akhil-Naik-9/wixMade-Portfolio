@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Clock, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
+  const [showContactInfo, setShowContactInfo] = useState(false);
 
   const contactInfo = [
     {
@@ -70,52 +72,93 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-8"
           >
-            <a
-              href="mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards"
+            <button
+              onClick={() => {
+                setShowContactInfo(true);
+                // Also open email client
+                window.location.href = "mailto:naika0362@gmail.com?subject=Project Inquiry&body=Hi Akhil,%0D%0A%0D%0AI'd like to discuss a project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards";
+              }}
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-paragraph font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
             >
               <Mail className="w-5 h-5" />
               Email Me Now
-            </a>
+            </button>
             <p className="font-paragraph text-sm text-foreground/60 mt-3">
-              Click to open your email client with a pre-filled message
+              Click to open your email client and show contact information below
             </p>
           </motion.div>
         </motion.div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Contact Information */}
+          {/* Contact Information - Show after Email Now is clicked */}
+          {showContactInfo && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <div className="glassmorphism-card">
+                <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
+                  Contact Information
+                </h3>
+                <div className="space-y-4">
+                  {contactInfo.map((info) => (
+                    <a
+                      key={info.label}
+                      href={info.href}
+                      target={info.href.startsWith('http') ? '_blank' : undefined}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
+                    >
+                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                        <info.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
+                        <p className="font-paragraph font-medium">{info.value}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Always visible sections */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            {/* Contact Details */}
-            <div className="glassmorphism-card">
-              <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((info) => (
-                  <a
-                    key={info.label}
-                    href={info.href}
-                    target={info.href.startsWith('http') ? '_blank' : undefined}
-                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
-                  >
-                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <info.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
-                      <p className="font-paragraph font-medium">{info.value}</p>
-                    </div>
-                  </a>
-                ))}
+            {/* Contact Details - Only show if not already shown above */}
+            {!showContactInfo && (
+              <div className="glassmorphism-card">
+                <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
+                  Contact Information
+                </h3>
+                <div className="space-y-4">
+                  {contactInfo.map((info) => (
+                    <a
+                      key={info.label}
+                      href={info.href}
+                      target={info.href.startsWith('http') ? '_blank' : undefined}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
+                    >
+                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                        <info.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
+                        <p className="font-paragraph font-medium">{info.value}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Availability */}
             <div className="glassmorphism-card">
