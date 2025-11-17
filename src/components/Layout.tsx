@@ -61,7 +61,7 @@ export default function Layout() {
             {/* Logo */}
             <Link 
               to="/" 
-              className="font-heading text-xl font-bold text-primary hover:text-primary/80 transition-colors flex items-center space-x-2"
+              className="font-heading text-xl font-bold bg-gradient-to-r from-electric-purple to-hot-pink bg-clip-text text-transparent hover:from-electric-purple/80 hover:to-hot-pink/80 transition-all flex items-center space-x-2"
             >
               <Image 
                 src="https://static.wixstatic.com/media/e6a693_cd0a358e5da4470e9b2d9902a0701688~mv2.png"
@@ -79,9 +79,9 @@ export default function Layout() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-paragraph text-sm font-medium transition-colors hover:text-primary ${
+                  className={`font-paragraph text-sm font-medium transition-colors hover:text-electric-purple ${
                     location.pathname === item.href
-                      ? 'text-primary'
+                      ? 'text-electric-purple'
                       : 'text-foreground/70'
                   }`}
                 >
@@ -96,7 +96,7 @@ export default function Layout() {
                 href="https://github.com/Akhil-Naik-9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-primary transition-colors"
+                className="text-foreground/70 hover:text-electric-purple transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -105,14 +105,14 @@ export default function Layout() {
                 href="https://www.linkedin.com/in/akhil-nenavath-78430a2ba"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-primary transition-colors"
+                className="text-foreground/70 hover:text-hot-pink transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:naika0362@gmail.com"
-                className="text-foreground/70 hover:text-primary transition-colors"
+                className="text-foreground/70 hover:text-cyber-orange transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -122,7 +122,7 @@ export default function Layout() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-foreground hover:text-primary transition-colors"
+              className="lg:hidden text-foreground hover:text-electric-purple transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -144,9 +144,9 @@ export default function Layout() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`block px-4 py-2 font-paragraph text-sm font-medium transition-colors hover:text-primary ${
+                    className={`block px-4 py-2 font-paragraph text-sm font-medium transition-colors hover:text-electric-purple ${
                       location.pathname === item.href
-                        ? 'text-primary bg-primary/10'
+                        ? 'text-electric-purple bg-electric-purple/10'
                         : 'text-foreground/70'
                     }`}
                   >
@@ -160,7 +160,7 @@ export default function Layout() {
                     href="https://github.com/Akhil-Naik-9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-primary transition-colors"
+                    className="text-foreground/70 hover:text-electric-purple transition-colors"
                     aria-label="GitHub"
                   >
                     <Github className="w-5 h-5" />
@@ -169,14 +169,14 @@ export default function Layout() {
                     href="https://www.linkedin.com/in/akhil-nenavath-78430a2ba"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-primary transition-colors"
+                    className="text-foreground/70 hover:text-hot-pink transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
                     href="mailto:naika0362@gmail.com"
-                    className="text-foreground/70 hover:text-primary transition-colors"
+                    className="text-foreground/70 hover:text-cyber-orange transition-colors"
                     aria-label="Email"
                   >
                     <Mail className="w-5 h-5" />
@@ -205,7 +205,7 @@ export default function Layout() {
                   height={32}
                   className="w-8 h-8 rounded-full object-cover bg-black p-1"
                 />
-                <h3 className="font-heading text-xl font-bold text-primary">Akhil Nenavath</h3>
+                <h3 className="font-heading text-xl font-bold bg-gradient-to-r from-electric-purple to-hot-pink bg-clip-text text-transparent">Akhil Nenavath</h3>
               </div>
               <p className="font-paragraph text-foreground/70 mb-4">
                 Full Stack Developer passionate about creating innovative digital experiences.
@@ -215,7 +215,7 @@ export default function Layout() {
                   href="https://github.com/Akhil-Naik-9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-primary transition-colors"
+                  className="text-foreground/70 hover:text-electric-purple transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -224,14 +224,14 @@ export default function Layout() {
                   href="https://www.linkedin.com/in/akhil-nenavath-78430a2ba"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-primary transition-colors"
+                  className="text-foreground/70 hover:text-hot-pink transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="mailto:naika0362@gmail.com"
-                  className="text-foreground/70 hover:text-primary transition-colors"
+                  className="text-foreground/70 hover:text-cyber-orange transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
@@ -247,7 +247,7 @@ export default function Layout() {
                   <li key={item.name}>
                     <Link
                       to={item.href}
-                      className="font-paragraph text-foreground/70 hover:text-primary transition-colors"
+                      className="font-paragraph text-foreground/70 hover:text-electric-purple transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -264,7 +264,7 @@ export default function Layout() {
                   <li key={item.name}>
                     <Link
                       to={item.href}
-                      className="font-paragraph text-foreground/70 hover:text-primary transition-colors"
+                      className="font-paragraph text-foreground/70 hover:text-hot-pink transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -273,7 +273,7 @@ export default function Layout() {
                 <li>
                   <Link
                     to="/sitemap"
-                    className="font-paragraph text-foreground/70 hover:text-primary transition-colors"
+                    className="font-paragraph text-foreground/70 hover:text-cyber-orange transition-colors"
                   >
                     Sitemap
                   </Link>

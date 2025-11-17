@@ -23,16 +23,29 @@ export default {
                 paragraph: "azeret-mono"
             },
             colors: {
-                'neon-teal': '#00FFC6',
-                'deep-space-blue': '#121212',
-                destructive: '#FF4136',
-                'destructive-foreground': '#FFFFFF',
-                background: '#121212',
-                secondary: '#64FFDA',
+                // Vibrant primary colors
+                'electric-purple': '#8B5CF6',
+                'hot-pink': '#EC4899',
+                'cyber-orange': '#F97316',
+                'neon-green': '#10B981',
+                'electric-blue': '#3B82F6',
+                'sunset-yellow': '#F59E0B',
+                'coral-red': '#EF4444',
+                'mint-teal': '#14B8A6',
+                
+                // Theme colors with vibrant updates
+                background: '#0F0F23', // Deep purple-blue background
                 foreground: '#FFFFFF',
-                'secondary-foreground': '#000000',
-                'primary-foreground': '#000000',
-                primary: '#00FFC6'
+                primary: '#8B5CF6', // Electric purple
+                'primary-foreground': '#FFFFFF',
+                secondary: '#EC4899', // Hot pink
+                'secondary-foreground': '#FFFFFF',
+                destructive: '#EF4444',
+                'destructive-foreground': '#FFFFFF',
+                
+                // Legacy colors for compatibility
+                'neon-teal': '#14B8A6',
+                'deep-space-blue': '#0F0F23'
             },
         },
     },

@@ -6,7 +6,24 @@
 
 /* Glassmorphism styles */
 .glassmorphism-card {
-  @apply bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm p-6;
+  @apply bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm p-6 relative overflow-hidden;
+}
+
+.glassmorphism-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(249, 115, 22, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glassmorphism-card:hover::before {
+  opacity: 1;
 }
 
 .glassmorphism-nav {
@@ -28,12 +45,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 255, 198, 0.3);
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.4));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 255, 198, 0.5);
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.6));
 }
 
 /* Cursor effects - Hide default cursor on interactive elements */
