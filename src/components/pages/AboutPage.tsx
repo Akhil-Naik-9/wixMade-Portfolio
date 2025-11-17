@@ -103,6 +103,13 @@ Seeking opportunities to apply my technical skills and passion for software deve
       period: '2023 - 2027 (Expected)',
       gpa: '7.9/10.0',
       relevant: ['Data Structures', 'Algorithms', 'Web Development', 'Database Systems']
+    },
+    {
+      degree: 'Intermediate (MPC)',
+      school: 'Sri Medhavi Junior College',
+      period: '2021 - 2023',
+      gpa: '951/1000',
+      relevant: ['Mathematics', 'Physics', 'Chemistry']
     }
   ];
 
