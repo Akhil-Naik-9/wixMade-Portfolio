@@ -168,6 +168,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Profile Section - Moved above Tech Stack */}
+      <section className="py-20 px-4 max-w-[120rem] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          {/* Heading above photo */}
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent drop-shadow-lg">
+              I'm Akhil Nenavath
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-electric-purple to-hot-pink mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          {/* Highlighted Profile Image */}
+          <div className="flex justify-center">
+            <div className="relative group">
+              {/* Glowing border effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              
+              {/* Image container */}
+              <div className="relative bg-background rounded-full p-2">
+                <Image
+                  src="https://static.wixstatic.com/media/e6a693_a094366e46494a0e8518891f93ca4ea6~mv2.png"
+                  alt="Akhil Nenavath - Professional Developer"
+                  width={200}
+                  className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-electric-purple/30 shadow-2xl shadow-electric-purple/25 group-hover:shadow-hot-pink/25 transition-all duration-500"
+                />
+                
+                {/* Floating accent elements */}
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-hot-pink to-cyber-orange rounded-full animate-bounce delay-100"></div>
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-neon-green to-electric-blue rounded-full animate-bounce delay-300"></div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Tech Stack Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -236,46 +276,6 @@ export default function HomePage() {
               <span className="relative z-10">View My Portfolio</span>
               <div className="absolute inset-0 bg-gradient-to-r from-hot-pink/10 to-electric-purple/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </Link>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Profile Section - Moved to bottom */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          {/* Heading above photo */}
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent drop-shadow-lg">
-              I'm Akhil Nenavath
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-electric-purple to-hot-pink mx-auto mt-4 rounded-full"></div>
-          </div>
-
-          {/* Highlighted Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative group">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              
-              {/* Image container */}
-              <div className="relative bg-background rounded-full p-2">
-                <Image
-                  src="https://static.wixstatic.com/media/e6a693_a094366e46494a0e8518891f93ca4ea6~mv2.png"
-                  alt="Akhil Nenavath - Professional Developer"
-                  width={200}
-                  className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-electric-purple/30 shadow-2xl shadow-electric-purple/25 group-hover:shadow-hot-pink/25 transition-all duration-500"
-                />
-                
-                {/* Floating accent elements */}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-hot-pink to-cyber-orange rounded-full animate-bounce delay-100"></div>
-                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-neon-green to-electric-blue rounded-full animate-bounce delay-300"></div>
-              </div>
-            </div>
           </div>
         </motion.div>
       </section>
