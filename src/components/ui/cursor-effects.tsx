@@ -71,28 +71,28 @@ export default function CursorEffects() {
   const cursorVariants = {
     default: {
       scale: 1,
-      backgroundColor: 'rgba(0, 255, 198, 0.8)',
-      border: '2px solid rgba(0, 255, 198, 0.4)',
+      backgroundColor: 'rgba(139, 92, 246, 0.7)', // Electric purple
+      border: '2px solid rgba(236, 72, 153, 0.5)', // Hot pink border
     },
     button: {
-      scale: 1.5,
-      backgroundColor: 'rgba(0, 255, 198, 0.2)',
-      border: '2px solid rgba(0, 255, 198, 1)',
+      scale: 1.8,
+      backgroundColor: 'rgba(236, 72, 153, 0.3)', // Hot pink
+      border: '3px solid rgba(139, 92, 246, 1)', // Electric purple border
     },
     text: {
-      scale: 0.8,
-      backgroundColor: 'rgba(100, 255, 218, 0.6)',
-      border: '1px solid rgba(100, 255, 218, 0.8)',
+      scale: 0.6,
+      backgroundColor: 'rgba(249, 115, 22, 0.6)', // Cyber orange
+      border: '1px solid rgba(249, 115, 22, 0.9)',
     },
     media: {
-      scale: 2,
-      backgroundColor: 'rgba(0, 255, 198, 0.1)',
-      border: '3px solid rgba(0, 255, 198, 0.8)',
+      scale: 2.5,
+      backgroundColor: 'rgba(16, 185, 129, 0.2)', // Neon green
+      border: '4px solid rgba(16, 185, 129, 0.8)',
     },
     pointer: {
-      scale: 1.2,
-      backgroundColor: 'rgba(0, 255, 198, 0.6)',
-      border: '2px solid rgba(0, 255, 198, 0.9)',
+      scale: 1.4,
+      backgroundColor: 'rgba(59, 130, 246, 0.5)', // Electric blue
+      border: '2px solid rgba(59, 130, 246, 0.9)',
     }
   };
 
@@ -100,65 +100,70 @@ export default function CursorEffects() {
     <>
       {/* Main cursor */}
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9999] mix-blend-difference"
         style={{
-          x: mousePosition.x - 12,
-          y: mousePosition.y - 12,
+          x: mousePosition.x - 16,
+          y: mousePosition.y - 16,
+          borderRadius: cursorVariant === 'text' ? '2px' : cursorVariant === 'media' ? '8px' : '50%',
         }}
         animate={{
           ...cursorVariants[cursorVariant as keyof typeof cursorVariants],
-          scale: isClicking ? 0.8 : cursorVariants[cursorVariant as keyof typeof cursorVariants].scale,
+          scale: isClicking ? 0.6 : cursorVariants[cursorVariant as keyof typeof cursorVariants].scale,
+          rotate: cursorVariant === 'media' ? 45 : 0,
         }}
         transition={{
           type: "spring",
-          stiffness: 500,
-          damping: 28,
-          mass: 0.5,
+          stiffness: 400,
+          damping: 25,
+          mass: 0.3,
         }}
       />
 
       {/* Cursor trail */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9998]"
+        className="fixed top-0 left-0 w-3 h-3 rounded-full pointer-events-none z-[9998]"
         style={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-          backgroundColor: 'rgba(0, 255, 198, 0.4)',
+          x: mousePosition.x - 6,
+          y: mousePosition.y - 6,
+          backgroundColor: 'rgba(236, 72, 153, 0.4)', // Hot pink trail
         }}
         animate={{
-          scale: isHovering ? 2 : 1,
-          opacity: isHovering ? 0.8 : 0.6,
+          scale: isHovering ? 3 : 1.5,
+          opacity: isHovering ? 0.9 : 0.7,
         }}
         transition={{
           type: "spring",
-          stiffness: 300,
-          damping: 20,
-          delay: 0.1,
+          stiffness: 250,
+          damping: 18,
+          delay: 0.08,
         }}
       />
 
       {/* Outer ring for special interactions */}
       {isHovering && (
         <motion.div
-          className="fixed top-0 left-0 w-12 h-12 rounded-full border-2 pointer-events-none z-[9997]"
+          className="fixed top-0 left-0 w-16 h-16 border-2 pointer-events-none z-[9997]"
           style={{
-            x: mousePosition.x - 24,
-            y: mousePosition.y - 24,
-            borderColor: 'rgba(0, 255, 198, 0.3)',
+            x: mousePosition.x - 32,
+            y: mousePosition.y - 32,
+            borderColor: cursorVariant === 'button' ? 'rgba(139, 92, 246, 0.4)' : 
+                        cursorVariant === 'media' ? 'rgba(16, 185, 129, 0.4)' :
+                        'rgba(249, 115, 22, 0.4)',
+            borderRadius: cursorVariant === 'text' ? '8px' : '50%',
           }}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ 
-            scale: cursorVariant === 'media' ? 1.5 : 1,
+            scale: cursorVariant === 'media' ? 1.8 : cursorVariant === 'button' ? 1.3 : 1,
             opacity: 1,
-            rotate: 360,
+            rotate: cursorVariant === 'media' ? 360 : cursorVariant === 'button' ? 180 : 0,
           }}
           exit={{ scale: 0, opacity: 0 }}
           transition={{
             type: "spring",
-            stiffness: 200,
-            damping: 15,
+            stiffness: 180,
+            damping: 12,
             rotate: {
-              duration: 2,
+              duration: cursorVariant === 'media' ? 3 : 1.5,
               repeat: Infinity,
               ease: "linear"
             }
@@ -169,19 +174,55 @@ export default function CursorEffects() {
       {/* Click ripple effect */}
       {isClicking && (
         <motion.div
-          className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 pointer-events-none z-[9996]"
+          className="fixed top-0 left-0 w-12 h-12 border-3 pointer-events-none z-[9996]"
           style={{
-            x: mousePosition.x - 16,
-            y: mousePosition.y - 16,
-            borderColor: 'rgba(0, 255, 198, 0.8)',
+            x: mousePosition.x - 24,
+            y: mousePosition.y - 24,
+            borderColor: 'rgba(139, 92, 246, 0.9)', // Electric purple ripple
+            borderRadius: '50%',
+            borderWidth: '3px',
           }}
-          initial={{ scale: 0.5, opacity: 1 }}
-          animate={{ scale: 3, opacity: 0 }}
+          initial={{ scale: 0.3, opacity: 1 }}
+          animate={{ scale: 4, opacity: 0 }}
           transition={{
-            duration: 0.6,
+            duration: 0.8,
             ease: "easeOut"
           }}
         />
+      )}
+
+      {/* Secondary click particles */}
+      {isClicking && (
+        <>
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9995]"
+              style={{
+                x: mousePosition.x - 4,
+                y: mousePosition.y - 4,
+                backgroundColor: i % 2 === 0 ? 'rgba(236, 72, 153, 0.8)' : 'rgba(139, 92, 246, 0.8)',
+              }}
+              initial={{ 
+                scale: 0, 
+                x: mousePosition.x - 4, 
+                y: mousePosition.y - 4,
+                opacity: 1 
+              }}
+              animate={{ 
+                scale: [0, 1, 0],
+                x: mousePosition.x - 4 + (Math.cos(i * 60 * Math.PI / 180) * 40),
+                y: mousePosition.y - 4 + (Math.sin(i * 60 * Math.PI / 180) * 40),
+                opacity: [1, 0.8, 0]
+              }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: i * 0.05
+              }}
+            />
+          ))}
+        </>
       )}
     </>
   );
