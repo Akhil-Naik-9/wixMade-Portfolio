@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Briefcase, Award } from 'lucide-react';
+import { ArrowRight, Code, Briefcase, Award, ChevronDown } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
 export default function HomePage() {
@@ -83,6 +83,28 @@ export default function HomePage() {
           </motion.div>
         </div>
         
+        {/* Arrow Button to Scroll Down */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2, duration: 0.8 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <button
+            onClick={() => {
+              const nextSection = document.querySelector('#featured-sections');
+              nextSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="group flex flex-col items-center gap-2 text-foreground/60 hover:text-foreground transition-all duration-300"
+            aria-label="Scroll to next section"
+          >
+            <span className="font-paragraph text-sm">Explore More</span>
+            <div className="p-2 rounded-full border border-foreground/20 group-hover:border-electric-purple/50 transition-all duration-300 group-hover:bg-electric-purple/10">
+              <ChevronDown className="w-5 h-5 animate-bounce" />
+            </div>
+          </button>
+        </motion.div>
+        
         {/* Diagonal accent lines */}
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-electric-purple/40 to-transparent transform rotate-12"></div>
         <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-r from-transparent via-hot-pink/40 to-transparent transform -rotate-12"></div>
@@ -90,7 +112,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Sections */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
+      <section id="featured-sections" className="py-20 px-4 max-w-[120rem] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Projects Card */}
           <motion.div
