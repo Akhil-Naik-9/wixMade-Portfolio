@@ -1,92 +1,11 @@
 import { motion } from 'framer-motion';
-import { Download, MapPin, Calendar, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Download, MapPin, Calendar, Mail, Phone, ExternalLink, Eye } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
   const [imageError, setImageError] = useState(false);
-  
-  const handleDownloadResume = () => {
-    // Create resume content as a .docx file
-    const resumeContent = `
-AKHIL NENAVATH
-Full Stack Developer
-
-Contact Information:
-Email: naika0362@gmail.com
-Location: Hyderabad, India
-Phone: Available upon request
-
-EDUCATION
-Bachelor of Technology in Computer Science and Engineering
-Sreenidhi Institute of Science and Technology
-2023 - 2027 (Expected)
-CGPA: 7.9/10.0
-
-Relevant Coursework:
-• Data Structures and Algorithms
-• Web Development
-• Database Systems
-• Software Engineering
-
-TECHNICAL SKILLS
-Frontend Development:
-• HTML5, CSS3, JavaScript
-• React.js, Modern UI/UX Design
-• Responsive Web Design
-
-Backend Development:
-• Java, Core Java
-• MongoDB Database
-• RESTful API Development
-
-Tools & Technologies:
-• Git Version Control
-• AWS Cloud Services
-• VS Code IDE
-• Agile Development
-
-PROJECTS
-Portfolio Website
-• Developed a responsive personal portfolio using React and modern web technologies
-• Implemented dynamic content management with CMS integration
-• Features project showcases, certificate displays, and contact functionality
-
-Web Applications
-• Built various web applications demonstrating full-stack development skills
-• Utilized modern frameworks and best practices for scalable solutions
-• Focus on user experience and performance optimization
-
-CERTIFICATIONS
-• Various technical certifications in web development and programming
-• Continuous learning through online platforms and courses
-
-PERSONAL INTERESTS
-• Photography and creative visual arts
-• Open-source project contributions
-• Technology trend research and development
-• Problem-solving and algorithmic thinking
-
-CAREER OBJECTIVE
-Seeking opportunities to apply my technical skills and passion for software development in a dynamic environment. Eager to contribute to innovative projects while continuing to learn and grow as a professional developer.
-`;
-
-    // Create a blob with the resume content
-    const blob = new Blob([resumeContent], { 
-      type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' 
-    });
-    
-    // Create a temporary link element to trigger download
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'Akhil_Nenavath_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Clean up the object URL
-    URL.revokeObjectURL(link.href);
-  };
 
   const skills = {
     frontend: ['HTML5', 'CSS', 'JavaScript'],
@@ -133,13 +52,13 @@ Seeking opportunities to apply my technical skills and passion for software deve
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={handleDownloadResume}
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
+              <Link 
+                to="/resume"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors flex items-center gap-2 justify-center"
               >
-                <Download className="w-4 h-4" />
-                Download Resume
-              </button>
+                <Eye className="w-4 h-4" />
+                View Resume
+              </Link>
               <a 
                 href="mailto:naika0362@gmail.com"
                 className="border border-secondary text-secondary px-6 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors flex items-center gap-2 justify-center"

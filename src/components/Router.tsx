@@ -12,6 +12,7 @@ import ProjectDetailPage from '@/components/pages/ProjectDetailPage';
 import ProgrammingLanguagesPage from '@/components/pages/ProgrammingLanguagesPage';
 import CertificatesPage from '@/components/pages/CertificatesPage';
 import ContactPage from '@/components/pages/ContactPage';
+import ResumePage from '@/components/pages/ResumePage';
 import NotFoundPage from '@/components/pages/NotFoundPage';
 import SitemapPage from '@/components/pages/SitemapPage';
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "resume",
+        element: <ResumePage />,
       },
       {
         path: "sitemap",
