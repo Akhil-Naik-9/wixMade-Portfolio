@@ -19,8 +19,8 @@ export default {
                 '9xl': ['8rem', { lineHeight: '1', letterSpacing: '0.05em', fontWeight: '700' }],
             },
             fontFamily: {
-                heading: "space grotesk",
-                paragraph: "azeret-mono"
+                heading: "'Bookman Old Style', serif",
+                paragraph: "'Bookman Old Style', serif"
             },
             colors: {
                 // Vibrant primary colors
