@@ -4,6 +4,14 @@ import { ArrowRight, Code, Briefcase, Award } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
 export default function HomePage() {
+  const nameVariants = {
+    initial: { opacity: 1 },
+    animate: {
+      opacity: [1, 0.2, 1],
+      transition: { duration: 0.2 }
+    }
+  };
+
   const containerVariants = {
     animate: {
       transition: {
@@ -14,6 +22,9 @@ export default function HomePage() {
     }
   };
 
+  const name = "Akhil Nenavath";
+  const title = "Full Stack Developer";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section with Glitching Effect */}
@@ -22,12 +33,54 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-tr from-cyber-orange/5 via-transparent to-neon-green/8"></div>
         <div className="text-center z-10 max-w-6xl mx-auto px-4">
           <motion.h1 
-            className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold"
+            className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold mb-6"
             variants={containerVariants}
             animate="animate"
           >
-            Hi I'm Akhil
+            {name.split('').map((char, index) => (
+              <motion.span
+                key={index}
+                variants={nameVariants}
+                className="inline-block"
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
           </motion.h1>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="space-y-6"
+          >
+            <h2 className="font-paragraph text-xl md:text-2xl bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent">
+              {title} & Creative Problem Solver
+            </h2>
+            
+            <p className="font-paragraph text-base md:text-lg max-w-2xl mx-auto text-foreground/80">
+              Crafting digital experiences with modern technologies. 
+              Passionate about clean code, innovative solutions, and continuous learning.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+              <Link 
+                to="/projects"
+                data-cursor="pointer"
+                className="bg-gradient-to-r from-electric-purple to-hot-pink text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:from-electric-purple/90 hover:to-hot-pink/90 transition-all flex items-center gap-2 shadow-lg shadow-electric-purple/25"
+              >
+                View My Work <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link 
+                to="/contact"
+                data-cursor="pointer"
+                className="border-2 border-transparent bg-gradient-to-r from-cyber-orange to-neon-green bg-clip-border text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:shadow-lg hover:shadow-cyber-orange/25 transition-all relative overflow-hidden group"
+              >
+                <span className="relative z-10">Get In Touch</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyber-orange/10 to-neon-green/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
+            </div>
+          </motion.div>
         </div>
         
         {/* Diagonal accent lines */}
