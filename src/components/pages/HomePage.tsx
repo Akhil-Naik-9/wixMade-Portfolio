@@ -22,7 +22,6 @@ export default function HomePage() {
     }
   };
 
-  const name = "Akhil Nenavath";
   const title = "Full Stack Developer";
 
   return (
@@ -32,31 +31,15 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-electric-purple/10 via-hot-pink/5 to-electric-blue/10"></div>
         <div className="absolute inset-0 bg-gradient-to-tr from-cyber-orange/5 via-transparent to-neon-green/8"></div>
         <div className="text-center z-10 max-w-6xl mx-auto px-4">
-          <motion.h1 
-            className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold mb-6"
-            variants={containerVariants}
-            animate="animate"
-          >
-            {name.split('').map((char, index) => (
-              <motion.span
-                key={index}
-                variants={nameVariants}
-                className="inline-block"
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))}
-          </motion.h1>
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
+            transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h2 className="font-paragraph text-xl md:text-2xl bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent">
-              {title} & Creative Problem Solver
-            </h2>
+            <h1 className="font-paragraph text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent\">
+              {title}
+            </h1>
             
             <p className="font-paragraph text-base md:text-lg max-w-2xl mx-auto text-foreground/80">
               Crafting digital experiences with modern technologies. 

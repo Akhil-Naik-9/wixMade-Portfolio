@@ -5,6 +5,7 @@ import { Image } from '@/components/ui/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import LoadingScreen from '@/components/ui/loading-screen';
+import KnifeCursor from '@/components/ui/knife-cursor';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,9 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Knife Cursor */}
+      <KnifeCursor />
+      
       {/* Loading Screen */}
       {showLoadingScreen && (
         <LoadingScreen onComplete={handleLoadingComplete} />
