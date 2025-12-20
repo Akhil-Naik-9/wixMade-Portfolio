@@ -53,17 +53,4 @@ html {
   background: #000000;
 }
 
-/* Custom cursor styles */
-* {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M8 4 L24 16 L16 20 L12 28 L8 26 L12 18 Z" fill="black" stroke="white" stroke-width="1"/></svg>') 4 4, auto;
-}
 
-/* Alternate cursor style - letter 'a' */
-body:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="8" y="24" font-size="24" font-weight="bold" fill="black">a</text></svg>') 4 4, auto;
-}
-
-/* Interactive elements use knife cursor */
-button, a, input, textarea, select, [role="button"] {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M8 4 L24 16 L16 20 L12 28 L8 26 L12 18 Z" fill="black" stroke="white" stroke-width="1"/></svg>') 4 4, auto;
-}
