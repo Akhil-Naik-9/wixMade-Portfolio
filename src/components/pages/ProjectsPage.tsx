@@ -236,7 +236,6 @@ export default function ProjectsPage() {
                         href={project.liveDemoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-cursor="pointer"
                         className="flex items-center gap-2 px-4 py-2 border border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-colors font-paragraph text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
@@ -248,7 +247,6 @@ export default function ProjectsPage() {
                         href={project.githubRepoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-cursor="pointer"
                         className="flex items-center gap-2 px-4 py-2 border border-foreground/20 text-foreground/70 rounded-lg hover:bg-foreground/5 hover:border-foreground/30 hover:text-foreground transition-colors font-paragraph text-sm font-medium"
                       >
                         <Github className="w-4 h-4" />
