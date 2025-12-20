@@ -23,29 +23,29 @@ export default {
                 paragraph: "'Bookman Old Style', serif"
             },
             colors: {
-                // Vibrant primary colors
-                'electric-purple': '#8B5CF6',
-                'hot-pink': '#EC4899',
-                'cyber-orange': '#F97316',
-                'neon-green': '#10B981',
-                'electric-blue': '#3B82F6',
-                'sunset-yellow': '#F59E0B',
-                'coral-red': '#EF4444',
-                'mint-teal': '#14B8A6',
+                // Black and white theme
+                'electric-purple': '#000000',
+                'hot-pink': '#000000',
+                'cyber-orange': '#000000',
+                'neon-green': '#000000',
+                'electric-blue': '#000000',
+                'sunset-yellow': '#000000',
+                'coral-red': '#000000',
+                'mint-teal': '#000000',
                 
-                // Theme colors with vibrant updates
-                background: '#0F0F23', // Deep purple-blue background
-                foreground: '#FFFFFF',
-                primary: '#8B5CF6', // Electric purple
-                'primary-foreground': '#FFFFFF',
-                secondary: '#EC4899', // Hot pink
-                'secondary-foreground': '#FFFFFF',
-                destructive: '#EF4444',
-                'destructive-foreground': '#FFFFFF',
+                // Theme colors - black and white only
+                background: '#FFFFFF', // White background
+                foreground: '#000000', // Black foreground
+                primary: '#000000', // Black primary
+                'primary-foreground': '#FFFFFF', // White text on black
+                secondary: '#FFFFFF', // White secondary
+                'secondary-foreground': '#000000', // Black text on white
+                destructive: '#000000', // Black
+                'destructive-foreground': '#FFFFFF', // White text
                 
                 // Legacy colors for compatibility
-                'neon-teal': '#14B8A6',
-                'deep-space-blue': '#0F0F23'
+                'neon-teal': '#000000',
+                'deep-space-blue': '#FFFFFF'
             },
         },
     },
