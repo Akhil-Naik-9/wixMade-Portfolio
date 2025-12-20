@@ -194,7 +194,7 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent">
+          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-white">
             Tech Stack
           </h3>
         </motion.div>
