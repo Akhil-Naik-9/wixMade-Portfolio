@@ -80,7 +80,9 @@ export default function Layout() {
                   key={item.name}
                   to={item.href}
                   className={`font-paragraph text-sm font-medium transition-colors hover:text-electric-purple ${
-                    location.pathname === item.href
+                    item.name === 'Projects'
+                      ? 'text-white'
+                      : location.pathname === item.href
                       ? 'text-electric-purple'
                       : 'text-foreground/70'
                   }`}
@@ -145,7 +147,9 @@ export default function Layout() {
                     key={item.name}
                     to={item.href}
                     className={`block px-4 py-2 font-paragraph text-sm font-medium transition-colors hover:text-electric-purple ${
-                      location.pathname === item.href
+                      item.name === 'Projects'
+                        ? 'text-white'
+                        : location.pathname === item.href
                         ? 'text-electric-purple bg-electric-purple/10'
                         : 'text-foreground/70'
                     }`}
