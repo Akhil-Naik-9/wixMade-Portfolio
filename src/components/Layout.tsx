@@ -45,18 +45,16 @@ export default function Layout() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Knife Cursor */}
       <KnifeCursor />
-      
       {/* Loading Screen */}
       {showLoadingScreen && (
         <LoadingScreen onComplete={handleLoadingComplete} />
       )}
-
       {/* Main App Content */}
       <div className={showLoadingScreen ? 'hidden' : 'block'}>
         <ScrollToTop />
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-50 glassmorphism-nav">
-        <nav className="max-w-[120rem] mx-auto px-4 py-4">
+        <nav className="max-w-[120rem] mx-auto px-4 py-4 text-primary-foreground">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link 

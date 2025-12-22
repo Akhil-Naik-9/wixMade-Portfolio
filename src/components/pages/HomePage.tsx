@@ -228,10 +228,10 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-neon-green via-electric-blue to-electric-purple bg-clip-text text-transparent">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-neon-green via-electric-blue to-electric-purple bg-clip-text text-primary-foreground">
             Connect Me
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+          <p className="font-paragraph text-lg mb-8 max-w-2xl mx-auto text-primary-foreground">
             I'm always interested in new opportunities and collaborations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
