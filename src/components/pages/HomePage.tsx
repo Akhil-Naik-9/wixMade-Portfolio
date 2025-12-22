@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Sections */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
+      <section className="py-20 px-4 max-w-[120rem] mx-auto text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Projects Card */}
           <motion.div
