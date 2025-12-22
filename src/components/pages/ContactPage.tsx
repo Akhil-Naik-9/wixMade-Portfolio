@@ -133,7 +133,7 @@ export default function ContactPage() {
                       href={info.href}
                       target={info.href.startsWith('http') ? '_blank' : undefined}
                       rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
+                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group text-primary-foreground"
                     >
                       <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                         <info.icon className="w-5 h-5 text-primary" />
@@ -157,15 +157,15 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-paragraph font-medium">Response Time</p>
-                    <p className="font-paragraph text-sm text-foreground/70">Usually within 24 hours</p>
+                    <p className="font-paragraph font-medium text-primary-foreground">Response Time</p>
+                    <p className="font-paragraph text-sm text-primary-foreground">Usually within 24 hours</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-paragraph font-medium">Currently Available</p>
-                    <p className="font-paragraph text-sm text-foreground/70">Open for new projects</p>
+                    <p className="font-paragraph font-medium text-primary-foreground">Currently Available</p>
+                    <p className="font-paragraph text-sm text-primary-foreground">Open for new projects</p>
                   </div>
                 </div>
               </div>
