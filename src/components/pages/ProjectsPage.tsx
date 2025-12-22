@@ -185,13 +185,13 @@ export default function ProjectsPage() {
               {/* Project Info */}
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-heading text-xl font-semibold text-primary mb-2 group-hover:text-primary/80 transition-colors">
-                    {project.projectName}
-                  </h3>
-                  <p className="font-paragraph text-sm text-foreground/70 line-clamp-3">
+                  <p className="font-paragraph text-sm line-clamp-3 text-primary-foreground">
                     {project.shortDescription}
                   </p>
-                </div>
+                <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-primary/80 transition-colors text-primary-foreground">
+                    {project.projectName}
+                  </h3>
+                  </div>
 
                 {/* Category and Date */}
                 <div className="flex items-center justify-between text-xs text-foreground/50">
