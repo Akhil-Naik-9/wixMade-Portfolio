@@ -183,7 +183,7 @@ export default function ContactPage() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-3 bg-foreground/5 rounded-lg transition-colors ${social.color}`}
+                    className={`p-3 bg-white rounded-lg transition-colors ${social.color}`}
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6" />
@@ -205,10 +205,10 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
             Let's Work Together
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+          <p className="font-paragraph text-lg mb-8 max-w-2xl mx-auto text-primary-foreground">
             Whether you have a detailed specification or just an idea, I'd love to hear about it. 
             Let's schedule a call to discuss how we can bring your vision to life.
           </p>
