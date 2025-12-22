@@ -190,7 +190,7 @@ export default function ContactPage() {
                   </a>
                 ))}
               </div>
-              <p className="font-paragraph text-sm text-foreground/70 mt-4">
+              <p className="font-paragraph text-sm mt-4 text-primary-foreground">
                 Follow me for updates on projects, tech insights, and industry news.
               </p>
             </div>
