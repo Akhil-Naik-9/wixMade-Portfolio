@@ -69,7 +69,6 @@ export default function HomePage() {
         <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-r from-transparent via-hot-pink/40 to-transparent transform -rotate-12"></div>
         <div className="absolute top-1/3 right-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-orange/30 to-transparent transform rotate-6"></div>
       </section>
-
       {/* Featured Sections */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -87,7 +86,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-heading text-xl font-semibold">Projects</h3>
               </div>
-              <p className="font-paragraph text-foreground/70 mb-4">
+              <p className="font-paragraph mb-4 text-primary-foreground">
                 Explore my latest web applications, mobile apps, and creative coding projects.
               </p>
               <div className="flex items-center text-electric-purple font-paragraph font-medium group-hover:gap-3 transition-all">
@@ -110,7 +109,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-heading text-xl font-semibold">Experience</h3>
               </div>
-              <p className="font-paragraph text-foreground/70 mb-4">
+              <p className="font-paragraph mb-4 text-primary-foreground">
                 Learn about my journey, skills, and professional background in tech.
               </p>
               <div className="flex items-center text-cyber-orange font-paragraph font-medium group-hover:gap-3 transition-all">
@@ -135,7 +134,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-heading text-xl font-semibold">Certificates</h3>
               </div>
-              <p className="font-paragraph text-foreground/70 mb-4">
+              <p className="font-paragraph mb-4 text-primary-foreground">
                 View my professional certifications and achievements.
               </p>
               <div className="flex items-center text-electric-blue font-paragraph font-medium group-hover:gap-3 transition-all">
@@ -145,7 +144,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* Profile Section - Moved above Tech Stack */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -185,7 +183,6 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
-
       {/* Tech Stack Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -194,7 +191,7 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary">
             Tech Stack
           </h3>
         </motion.div>
@@ -218,12 +215,11 @@ export default function HomePage() {
               className="glassmorphism-card text-center p-6 hover:border-electric-purple/30 transition-all group relative overflow-hidden"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-              <span className="font-paragraph font-medium text-sm relative z-10">{skill.name}</span>
+              <span className="font-paragraph font-medium text-sm relative z-10 text-primary-foreground">{skill.name}</span>
             </motion.div>
           ))}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
