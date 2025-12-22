@@ -37,7 +37,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <p className="font-paragraph text-lg md:text-2xl text-foreground/80 mb-2">
+            <p className="font-paragraph text-lg text-foreground/80 mb-2 text-left md:text-4xl">
               Hi I'm a
             </p>
             <h1 className="font-paragraph text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent\">

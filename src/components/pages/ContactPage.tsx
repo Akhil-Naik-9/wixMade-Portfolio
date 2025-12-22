@@ -139,7 +139,7 @@ export default function ContactPage() {
                         <info.icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
+                        <p className="font-paragraph text-sm text-primary-foreground">{info.label}</p>
                         <p className="font-paragraph font-medium">{info.value}</p>
                       </div>
                     </a>
@@ -197,7 +197,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
