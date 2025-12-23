@@ -247,7 +247,7 @@ export default function AboutPage() {
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Beyond Coding / <span className="text-secondary">Hobbies</span>
+            <span className="text-secondary">Beyond Coding</span> / <span className="text-secondary">Hobbies</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 mb-8 leading-relaxed">
             When I'm not coding, I like taking photos, playing chess, and trying new recipes. 
