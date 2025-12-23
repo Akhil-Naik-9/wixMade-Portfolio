@@ -141,12 +141,12 @@ export default function Layout() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`block px-4 py-2 font-paragraph text-sm font-medium transition-colors hover:text-electric-purple ${
+                    className={`block px-4 py-2 font-paragraph text-sm font-medium transition-colors rounded-lg border ${
                       item.name === 'Projects'
-                        ? 'text-white'
+                        ? 'text-white bg-primary border-primary hover:bg-primary/90'
                         : location.pathname === item.href
-                        ? 'text-electric-purple bg-electric-purple/10'
-                        : 'text-foreground/70'
+                        ? 'text-electric-purple bg-electric-purple/10 border-electric-purple/20 hover:bg-electric-purple/20'
+                        : 'text-foreground/70 bg-foreground/5 border-foreground/10 hover:bg-foreground/10 hover:text-electric-purple'
                     }`}
                   >
                     {item.name}
