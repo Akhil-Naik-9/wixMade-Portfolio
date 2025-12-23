@@ -246,15 +246,15 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-secondary">
             <span className="text-secondary">Beyond Coding</span> / <span className="text-secondary">Hobbies</span>
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 mb-8 leading-relaxed">
+          <p className="font-paragraph text-lg mb-8 leading-relaxed text-secondary">
             When I'm not coding, I like taking photos, playing chess, and trying new recipes. 
             I also enjoy working on open-source projects and learning about new technology 
             through podcasts and tech events.
           </p>
-          <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
+          <p className="font-paragraph text-lg leading-relaxed text-secondary">
             Having different hobbies helps me think better and solve problems in new ways 
             when I'm programming.
           </p>
