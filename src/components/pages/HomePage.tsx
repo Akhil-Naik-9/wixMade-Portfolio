@@ -37,19 +37,19 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <p className="font-paragraph text-lg text-foreground/80 mb-2 text-left md:text-4xl">
+            <p className="font-paragraph text-lg text-gray-700 mb-2 text-center md:text-xl">
               Hi I'm a
             </p>
-            <h1 className="font-paragraph text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent\">
+            <h1 className="font-paragraph text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-hot-pink to-electric-blue bg-clip-text text-transparent">
               {title}
             </h1>
             
-            <p className="font-paragraph text-base md:text-lg max-w-2xl mx-auto text-foreground/80">
+            <p className="font-paragraph text-base md:text-lg max-w-2xl mx-auto text-gray-700">
               Crafting digital experiences with modern technologies. 
               Passionate about clean code, innovative solutions, and continuous learning.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 w-full">
               <Link 
                 to="/projects"
                 className="bg-gradient-to-r from-electric-purple to-hot-pink px-8 py-3 rounded-lg font-medium hover:from-electric-purple/90 hover:to-hot-pink/90 transition-all flex items-center gap-2 shadow-lg shadow-electric-purple/25 font-alef-regular text-[#121213ff]"
