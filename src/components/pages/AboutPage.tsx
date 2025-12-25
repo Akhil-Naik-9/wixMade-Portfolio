@@ -127,14 +127,14 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="glassmorphism-card"
             >
-              <h3 className="font-heading text-xl font-semibold mb-4 capitalize text-primary">
+              <h3 className="font-heading text-xl font-semibold mb-4 capitalize text-secondary">
                 {category.replace(/([A-Z])/g, ' $1').trim()}
               </h3>
               <div className="space-y-2">
                 {skillList.map((skill) => (
                   <div
                     key={skill}
-                    className="font-paragraph text-sm text-foreground/80 bg-foreground/5 px-3 py-2 rounded-lg"
+                    className="font-paragraph text-sm bg-foreground/5 px-3 py-2 rounded-lg text-secondary"
                   >
                     {skill}
                   </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-            Work <span className="text-secondary">Experience</span>
+            Work <span className="text-primary">Experience</span>
           </h2>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
             Beginning my professional journey
@@ -167,7 +167,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="glassmorphism-card text-center"
           >
-            <p className="font-paragraph text-lg text-foreground/80 leading-relaxed">
+            <p className="font-paragraph text-lg leading-relaxed text-secondary">
               I'm a fresher looking forward to starting my professional journey in software development. 
               I'm eager to apply my academic knowledge and skills to real-world projects and contribute 
               to innovative solutions while continuing to learn and grow in the field.
@@ -202,7 +202,7 @@ export default function AboutPage() {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="font-heading text-xl font-semibold text-primary mb-1">
+                  <h3 className="font-heading text-xl font-semibold mb-1 text-secondary">
                     {edu.degree}
                   </h3>
                   <a 
