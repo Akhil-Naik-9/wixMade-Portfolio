@@ -27,33 +27,37 @@
         },
         "palette": {
           "colors": {
-            "primary": "#00FFC6",
-            "primaryForeground": "#000000",
-            "secondary": "#64FFDA",
-            "secondaryForeground": "#000000",
-            "background": "#121212",
-            "foreground": "#FFFFFF",
+            "primary": "#000000",
+            "primaryForeground": "#FFFFFF",
+            "secondary": "#121212",
+            "secondaryForeground": "#FFFFFF",
+            "background": "#FFFFFF",
+            "foreground": "#121212",
             "customColors": [
               {
-                "name": "neonTeal",
-                "value": "#00FFC6"
-              },
-              {
-                "name": "deepSpaceBlue",
+                "name": "primaryText",
                 "value": "#121212"
               },
               {
-                "name": "destructive",
-                "value": "#FF4136"
+                "name": "secondaryText",
+                "value": "#757575"
               },
               {
-                "name": "destructive-foreground",
+                "name": "dividers",
+                "value": "#E5E5E5"
+              },
+              {
+                "name": "ctaBackground",
+                "value": "#000000"
+              },
+              {
+                "name": "ctaForeground",
                 "value": "#FFFFFF"
               }
             ]
           },
-          "paletteUsageGuide": "Primary color (#00FFC6) is used for interactive elements and highlights. Secondary color (#64FFDA) is used for subtle accents. Background color (#121212) is the base for the dark mode aesthetic. Foreground color (#FFFFFF) is used for general text.",
-          "paletteAccessibilityNotes": "Ensure sufficient contrast between text and background colors for readability. Use WCAG AA compliance guidelines."
+          "paletteUsageGuide": "Background (#FFFFFF) is the pure white base. Primary text (#121212) is used for headings and main content. Secondary text (#757575) is used for details and descriptions. Dividers (#E5E5E5) are used for borders and separators. CTA (#000000) with white text is used for call-to-action buttons.",
+          "paletteAccessibilityNotes": "All text colors meet WCAG AA contrast standards against their backgrounds. Primary text (#121212) on white background provides excellent contrast. Secondary text (#757575) on white meets WCAG AA standards."
         },
         "typography": {
           "headings": {
