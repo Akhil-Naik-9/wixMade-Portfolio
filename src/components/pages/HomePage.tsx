@@ -157,7 +157,7 @@ export default function HomePage() {
         >
           {/* Heading above photo */}
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text text-transparent drop-shadow-lg">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-electric-purple via-hot-pink to-cyber-orange bg-clip-text drop-shadow-lg text-[#171616ff]">
               I'm Akhil Nenavath
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-electric-purple to-hot-pink mx-auto mt-4 rounded-full"></div>
@@ -240,7 +240,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-neon-green to-electric-blue text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:from-neon-green/90 hover:to-electric-blue/90 transition-all shadow-lg shadow-neon-green/25"
+              className="bg-gradient-to-r from-neon-green to-electric-blue px-8 py-3 rounded-lg font-paragraph font-medium hover:from-neon-green/90 hover:to-electric-blue/90 transition-all shadow-lg shadow-neon-green/25 text-[#131313ff]"
             >
               Start a Conversation
             </Link>
