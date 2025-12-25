@@ -60,7 +60,7 @@ export default function HomePage() {
                 to="/contact"
                 className="border-2 border-transparent bg-gradient-to-r from-cyber-orange to-neon-green bg-clip-border text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:shadow-lg hover:shadow-cyber-orange/25 transition-all relative overflow-hidden group"
               >
-                <span className="relative z-10">Get In Touch</span>
+                <span className="relative z-10 text-[#171616ff]">Get In Touch</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyber-orange/10 to-neon-green/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </Link>
             </div>
