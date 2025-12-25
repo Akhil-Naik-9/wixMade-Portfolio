@@ -222,12 +222,12 @@ export default function AboutPage() {
               </div>
               
               <div>
-                <h4 className="font-paragraph font-semibold text-foreground mb-2">Relevant Coursework:</h4>
+                <h4 className="font-paragraph font-semibold mb-2 text-secondary">Relevant Coursework:</h4>
                 <div className="flex flex-wrap gap-2">
                   {edu.relevant.map((course) => (
                     <span
                       key={course}
-                      className="font-paragraph text-sm text-foreground/80 bg-primary/10 px-3 py-1 rounded-lg"
+                      className="font-paragraph text-sm bg-primary/10 px-3 py-1 rounded-lg text-secondary"
                     >
                       {course}
                     </span>

@@ -98,10 +98,10 @@ export default function CertificatesPage() {
             <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
               <Award className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-heading text-2xl font-bold text-primary mb-2">
+            <h3 className="font-heading text-2xl font-bold mb-2 text-secondary">
               {certificates.length}
             </h3>
-            <p className="font-paragraph text-foreground/70">Total Certificates</p>
+            <p className="font-paragraph text-secondary">Total Certificates</p>
           </div>
           
           <div className="glassmorphism-card text-center">
@@ -111,7 +111,7 @@ export default function CertificatesPage() {
             <h3 className="font-heading text-2xl font-bold text-secondary mb-2">
               {Array.from(new Set(certificates.map(c => c.issuingOrganization).filter(Boolean))).length}
             </h3>
-            <p className="font-paragraph text-foreground/70">Issuing Organizations</p>
+            <p className="font-paragraph text-secondary">Issuing Organizations</p>
           </div>
           
           <div className="glassmorphism-card text-center">
@@ -247,7 +247,6 @@ export default function CertificatesPage() {
           </motion.div>
         )}
       </section>
-
       {/* Certification Philosophy */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -269,8 +268,6 @@ export default function CertificatesPage() {
           </p>
         </motion.div>
       </section>
-
-
     </div>
   );
 }
