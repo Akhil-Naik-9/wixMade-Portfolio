@@ -52,7 +52,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
               <Link 
                 to="/projects"
-                className="bg-gradient-to-r from-electric-purple to-hot-pink text-white px-8 py-3 rounded-lg font-paragraph font-medium hover:from-electric-purple/90 hover:to-hot-pink/90 transition-all flex items-center gap-2 shadow-lg shadow-electric-purple/25"
+                className="bg-gradient-to-r from-electric-purple to-hot-pink px-8 py-3 rounded-lg font-medium hover:from-electric-purple/90 hover:to-hot-pink/90 transition-all flex items-center gap-2 shadow-lg shadow-electric-purple/25 font-alef-regular text-[#121213ff]"
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
@@ -87,7 +87,7 @@ export default function HomePage() {
                 <div className="p-3 bg-gradient-to-br from-electric-purple/20 to-hot-pink/20 rounded-lg border border-electric-purple/30">
                   <Code className="w-6 h-6 text-electric-purple" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold">Projects</h3>
+                <h3 className="font-heading text-xl font-semibold text-[#070717ff]">Projects</h3>
               </div>
               <p className="font-paragraph mb-4 text-primary-foreground">
                 Explore my latest web applications, mobile apps, and creative coding projects.
