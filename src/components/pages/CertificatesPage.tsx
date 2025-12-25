@@ -121,7 +121,7 @@ export default function CertificatesPage() {
             <h3 className="font-heading text-2xl font-bold text-primary mb-2">
               {certificates.filter(c => c.certificateUrl).length}
             </h3>
-            <p className="font-paragraph text-foreground/70">Verified Online</p>
+            <p className="font-paragraph text-secondary-foreground">Verified Online</p>
           </div>
         </motion.div>
 
@@ -255,14 +255,14 @@ export default function CertificatesPage() {
           transition={{ duration: 0.8 }}
           className="glassmorphism-card text-center max-w-4xl mx-auto"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-secondary">
             Commitment to <span className="text-secondary">Excellence</span>
           </h2>
-          <p className="font-paragraph text-lg text-foreground/70 mb-8 leading-relaxed">
+          <p className="font-paragraph text-lg mb-8 leading-relaxed text-secondary">
             Every certificate shows my commitment to learning and growing as a developer. 
             I earn these credentials to prove my skills and stay updated with new technologies.
           </p>
-          <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
+          <p className="font-paragraph text-lg leading-relaxed text-secondary">
             These achievements show that I'm serious about improving my abilities and 
             meeting industry standards.
           </p>
