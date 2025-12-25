@@ -4,53 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Glassmorphism styles - Black and white theme */
-.glassmorphism-card {
-  @apply bg-black border border-gray-800 rounded-2xl backdrop-blur-sm p-6 relative overflow-hidden;
-}
-
-.glassmorphism-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.glassmorphism-card:hover::before {
-  opacity: 1;
-}
-
-.glassmorphism-nav {
-  @apply bg-white/80 border-b border-gray-300 backdrop-blur-md;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
-
-/* Custom scrollbar - Black and white theme */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(200, 200, 200, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333333;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #000000;
-}
-
 
