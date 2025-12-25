@@ -88,6 +88,18 @@ export default function ProjectsPage() {
     });
   };
 
+  const getProjectImageUrl = (projectName: string | undefined): string => {
+    if (!projectName) {
+      return "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
+    }
+
+    // Convert project name to lowercase and replace spaces with hyphens
+    const imageName = projectName.toLowerCase().replace(/\s+/g, '-');
+    
+    // Return the image URL with the project name
+    return 'https://static.wixstatic.com/media/e6a693_fa2b63a0b65d42f783a7e83707c97404~mv2.png?originWidth=384&originHeight=192';
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
@@ -174,7 +186,7 @@ export default function ProjectsPage() {
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-xl mb-6">
                 <Image
-                  src={project.projectImage || "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192"}
+                  src={getProjectImageUrl(project.projectName)}
                   alt={project.projectName || 'Project'}
                   width={400}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
