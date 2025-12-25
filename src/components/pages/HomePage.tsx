@@ -73,26 +73,26 @@ export default function HomePage() {
         <div className="absolute top-1/3 right-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-orange/30 to-transparent transform rotate-6"></div>
       </section>
       {/* Featured Sections */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto text-white">
+      <section className="py-20 px-4 max-w-[120rem] mx-auto text-gray-900">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Projects Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glassmorphism-card group cursor-pointer"
+            className="bg-white border border-gray-200 rounded-lg p-6 group cursor-pointer hover:border-gray-300 hover:shadow-md transition-all"
           >
             <Link to="/projects" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-electric-purple/20 to-hot-pink/20 rounded-lg border border-electric-purple/30">
-                  <Code className="w-6 h-6 text-electric-purple" />
+                <div className="p-3 bg-purple-100 rounded-lg border border-purple-200">
+                  <Code className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-[#070717ff]">Projects</h3>
+                <h3 className="font-heading text-xl font-semibold text-gray-900">Projects</h3>
               </div>
-              <p className="font-paragraph mb-4 text-primary-foreground">
+              <p className="font-paragraph mb-4 text-gray-600">
                 Explore my latest web applications, mobile apps, and creative coding projects.
               </p>
-              <div className="flex items-center text-electric-purple font-paragraph font-medium group-hover:gap-3 transition-all">
+              <div className="flex items-center text-purple-600 font-paragraph font-medium group-hover:gap-3 transition-all">
                 View Projects <ArrowRight className="w-4 h-4 ml-2" />
               </div>
             </Link>
@@ -103,19 +103,19 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="glassmorphism-card group cursor-pointer"
+            className="bg-white border border-gray-200 rounded-lg p-6 group cursor-pointer hover:border-gray-300 hover:shadow-md transition-all"
           >
             <Link to="/about" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-cyber-orange/20 to-neon-green/20 rounded-lg border border-cyber-orange/30">
-                  <Briefcase className="w-6 h-6 text-cyber-orange" />
+                <div className="p-3 bg-orange-100 rounded-lg border border-orange-200">
+                  <Briefcase className="w-6 h-6 text-orange-600" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold">Experience</h3>
+                <h3 className="font-heading text-xl font-semibold text-gray-900">Experience</h3>
               </div>
-              <p className="font-paragraph mb-4 text-primary-foreground">
+              <p className="font-paragraph mb-4 text-gray-600">
                 Learn about my journey, skills, and professional background in tech.
               </p>
-              <div className="flex items-center text-cyber-orange font-paragraph font-medium group-hover:gap-3 transition-all">
+              <div className="flex items-center text-orange-600 font-paragraph font-medium group-hover:gap-3 transition-all">
                 About Me <ArrowRight className="w-4 h-4 ml-2" />
               </div>
             </Link>
@@ -128,19 +128,19 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="glassmorphism-card group cursor-pointer"
+            className="bg-white border border-gray-200 rounded-lg p-6 group cursor-pointer hover:border-gray-300 hover:shadow-md transition-all"
           >
             <Link to="/certificates" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-electric-blue/20 to-mint-teal/20 rounded-lg border border-electric-blue/30">
-                  <Award className="w-6 h-6 text-electric-blue" />
+                <div className="p-3 bg-blue-100 rounded-lg border border-blue-200">
+                  <Award className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold">Certificates</h3>
+                <h3 className="font-heading text-xl font-semibold text-gray-900">Certificates</h3>
               </div>
-              <p className="font-paragraph mb-4 text-primary-foreground">
+              <p className="font-paragraph mb-4 text-gray-600">
                 View my professional certifications and achievements.
               </p>
-              <div className="flex items-center text-electric-blue font-paragraph font-medium group-hover:gap-3 transition-all">
+              <div className="flex items-center text-blue-600 font-paragraph font-medium group-hover:gap-3 transition-all">
                 View Credentials <ArrowRight className="w-4 h-4 ml-2" />
               </div>
             </Link>
