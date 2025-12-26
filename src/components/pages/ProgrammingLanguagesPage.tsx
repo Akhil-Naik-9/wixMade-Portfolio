@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Star, Calendar, ExternalLink, BookOpen } from 'lucide-react';
+import { Code, Star, Calendar, ExternalLink, BookOpen, Coffee, Zap, Rocket } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -15,6 +15,7 @@ interface ProgrammingLanguage {
   resources: { name: string; url: string }[];
   icon: string;
   color: string;
+  lucideIcon: React.ReactNode;
 }
 
 const programmingLanguages: ProgrammingLanguage[] = [
@@ -44,7 +45,8 @@ const programmingLanguages: ProgrammingLanguage[] = [
       { name: 'Java Code Geeks', url: 'https://www.javacodegeeks.com/' }
     ],
     icon: '☕',
-    color: 'from-orange-500 to-red-600'
+    color: 'from-orange-500 to-red-600',
+    lucideIcon: <Coffee className="w-6 h-6" />
   },
   {
     id: 'c',
@@ -72,7 +74,8 @@ const programmingLanguages: ProgrammingLanguage[] = [
       { name: 'Learn C Programming', url: 'https://www.learn-c.org/' }
     ],
     icon: '⚡',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
+    lucideIcon: <Zap className="w-6 h-6" />
   },
   {
     id: 'java-core',
@@ -100,7 +103,8 @@ const programmingLanguages: ProgrammingLanguage[] = [
       { name: 'OpenJDK Documentation', url: 'https://openjdk.org/' }
     ],
     icon: '🚀',
-    color: 'from-green-500 to-teal-600'
+    color: 'from-green-500 to-teal-600',
+    lucideIcon: <Rocket className="w-6 h-6" />
   }
 ];
 
@@ -156,8 +160,13 @@ export default function ProgrammingLanguagesPage() {
                 <Card className="glassmorphism-card h-full group cursor-pointer hover:scale-105 transition-transform duration-300">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`text-4xl p-3 rounded-lg bg-gradient-to-r ${language.color} bg-clip-text`}>
-                        {language.icon}
+                      <div className="flex items-center gap-3">
+                        <div className={`text-4xl p-3 rounded-lg bg-gradient-to-r ${language.color} bg-clip-text`}>
+                          {language.icon}
+                        </div>
+                        <div className="text-primary">
+                          {language.lucideIcon}
+                        </div>
                       </div>
                       <Badge className={proficiencyColors[language.proficiencyLevel]}>
                         {language.proficiencyLevel}
