@@ -72,9 +72,7 @@ export default function HomePage() {
                   Introduction
                 </h2>
                 
-                <p className="font-paragraph text-base md:text-lg text-gray-600 text-center lg:text-left max-w-xl">
-                  I am pursuing B.Tech in Computer Science and Engineering at Sreenidhi Institute of Science and Technology. I am currently learning Full Stack Development and building skills in both front-end and back-end technologies. I come from Devarakonda, Nalgonda district, and I am passionate about improving my technical skills and growing as a software professional.
-                </p>
+                <p className="font-paragraph text-base md:text-lg text-gray-600 lg:text-left max-w-xl text-justify">{"“My name is Akhil Nenavath. I am pursuing B.Tech in Computer Science and Engineering at Sreenidhi Institute of Science and Technology. I am currently learning Full Stack Development and building skills in both front-end and back-end technologies. I come from Devarakonda, Nalgonda district, and I am passionate about improving my technical skills and growing as a software professional."}</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto pt-8">
