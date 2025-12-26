@@ -89,6 +89,16 @@ export default function ProjectsPage() {
   };
 
   const getProjectImageUrl = (projectName: string | undefined): string => {
+    // Map of project names to their generated image URLs
+    const projectImageMap: { [key: string]: string } = {
+      'dashboard-application': 'https://static.wixstatic.com/media/e6a693_ca59509b4f6b42e2a6e0c8d8c5a1e993~mv2.png?originWidth=384&originHeight=192',
+      'e-commerce-platform': 'https://static.wixstatic.com/media/e6a693_aeee3475dbd44098b705be6f73e6553a~mv2.png?originWidth=384&originHeight=192',
+      'social-media-app': 'https://static.wixstatic.com/media/e6a693_5175a75e7f524dbd8ef9ce84c859e691~mv2.png?originWidth=384&originHeight=192',
+      'task-management-system': 'https://static.wixstatic.com/media/e6a693_e01644e8cb034279aa26cb224d3673a1~mv2.png?originWidth=384&originHeight=192',
+      'real-estate-portal': 'https://static.wixstatic.com/media/e6a693_3ca32e02b13e4387b2a62ac43352aa21~mv2.png?originWidth=384&originHeight=192',
+      'fitness-tracker': 'https://static.wixstatic.com/media/e6a693_412a2df6f7974f3a99ca3e5a4e159ec1~mv2.png?originWidth=384&originHeight=192',
+    };
+
     if (!projectName) {
       return "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
     }
@@ -96,8 +106,8 @@ export default function ProjectsPage() {
     // Convert project name to lowercase and replace spaces with hyphens
     const imageName = projectName.toLowerCase().replace(/\s+/g, '-');
     
-    // Return the image URL with the project name
-    return 'https://static.wixstatic.com/media/e6a693_fa2b63a0b65d42f783a7e83707c97404~mv2.png?originWidth=384&originHeight=192';
+    // Return the mapped image URL or a default if not found
+    return projectImageMap[imageName] || "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
   };
 
   if (isLoading) {

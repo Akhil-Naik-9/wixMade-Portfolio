@@ -6,6 +6,24 @@ import { BaseCrudService } from '@/integrations';
 import { Projects } from '@/entities';
 import { Image } from '@/components/ui/image';
 
+const projectImageMap: { [key: string]: string } = {
+  'dashboard-application': 'https://static.wixstatic.com/media/e6a693_168fb10f4f474b7aa323a9363f698e49~mv2.png?originWidth=576&originHeight=384',
+  'e-commerce-platform': 'https://static.wixstatic.com/media/e6a693_02b4bd13d21f446791cfbaa452f64886~mv2.png?originWidth=576&originHeight=384',
+  'social-media-app': 'https://static.wixstatic.com/media/e6a693_fda96aec10994e50b3401eaa86995b92~mv2.png?originWidth=576&originHeight=384',
+  'task-management-system': 'https://static.wixstatic.com/media/e6a693_ac69b8e5c21841b5bc2b8c7d0d83d084~mv2.png?originWidth=576&originHeight=384',
+  'real-estate-portal': 'https://static.wixstatic.com/media/e6a693_6d46e2ce323e47a793b7655fbb98d334~mv2.png?originWidth=576&originHeight=384',
+  'fitness-tracker': 'https://static.wixstatic.com/media/e6a693_b1cd51f1a49c4f8ab22d0ac23d8c7d8e~mv2.png?originWidth=576&originHeight=384',
+};
+
+const getProjectImageUrl = (projectName: string | undefined): string => {
+  if (!projectName) {
+    return "https://static.wixstatic.com/media/e6a693_1df2ecedb021472ea5e86c141f988f70~mv2.png?originWidth=576&originHeight=384";
+  }
+  
+  const imageName = projectName.toLowerCase().replace(/\s+/g, '-');
+  return projectImageMap[imageName] || "https://static.wixstatic.com/media/e6a693_1df2ecedb021472ea5e86c141f988f70~mv2.png?originWidth=576&originHeight=384";
+};
+
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [project, setProject] = useState<Projects | null>(null);
@@ -97,7 +115,7 @@ export default function ProjectDetailPage() {
           >
             <div className="glassmorphism-card p-0 overflow-hidden">
               <Image
-                src={project.projectImage || "https://static.wixstatic.com/media/e6a693_1df2ecedb021472ea5e86c141f988f70~mv2.png?originWidth=576&originHeight=384"}
+                src={getProjectImageUrl(project.projectName)}
                 alt={project.projectName || 'Project'}
                 width={600}
                 className="w-full h-96 object-cover"
