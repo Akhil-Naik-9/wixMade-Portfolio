@@ -26,44 +26,75 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Hero Section with Glitching Effect */}
+      {/* Hero Section - Two Column Layout */}
       <section className="h-screen grid place-items-center relative overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-gray-50/30 to-gray-100/50"></div>
         <div className="absolute inset-0 bg-gradient-to-tr from-gray-50/30 via-transparent to-gray-100/40"></div>
-        <div className="text-center z-10 max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <p className="font-paragraph text-lg text-gray-600 mb-2 text-center md:text-xl">
-              Hi I'm a
-            </p>
-            <h1 className="font-paragraph text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900">
-              {title}
-            </h1>
-            
-            <p className="font-paragraph text-base md:text-lg max-w-2xl mx-auto text-gray-600">
-              Crafting digital experiences with modern technologies. 
-              Passionate about clean code, innovative solutions, and continuous learning.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 w-full">
-              <Link 
-                to="/projects"
-                className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all flex items-center gap-2 shadow-lg"
-              >
-                View My Work <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link 
-                to="/contact"
-                className="border-2 border-black bg-white text-black px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-gray-50 transition-all"
-              >
-                Get In Touch
-              </Link>
-            </div>
-          </motion.div>
+        <div className="z-10 max-w-6xl mx-auto px-4 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+            {/* Left Side - Name and Profile Picture */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col items-center lg:items-start space-y-8"
+            >
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center lg:text-left">
+                Hi I'm Akhil Nenavath
+              </h1>
+              
+              {/* Profile Image */}
+              <div className="relative group">
+                {/* Glowing border effect */}
+                <div className="absolute -inset-1 bg-gray-300 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                
+                {/* Image container */}
+                <div className="relative bg-white rounded-full p-2">
+                  <Image
+                    src="https://static.wixstatic.com/media/e6a693_65e7d4ea8cfe41b09718e3e1d6bb0256~mv2.png"
+                    alt="Akhil Nenavath - Professional Developer"
+                    width={200}
+                    className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-gray-200 shadow-lg group-hover:shadow-xl transition-all duration-500"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Subtitle and CTA */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-col items-center lg:items-start space-y-8"
+            >
+              <div className="space-y-6">
+                <p className="font-paragraph text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 text-center lg:text-left">
+                  trying to be a<br />
+                  <span className="text-gray-600">full stack developer</span>
+                </p>
+                
+                <p className="font-paragraph text-base md:text-lg text-gray-600 text-center lg:text-left max-w-xl">
+                  Crafting digital experiences with modern technologies. 
+                  Passionate about clean code, innovative solutions, and continuous learning.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                <Link 
+                  to="/projects"
+                  className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all flex items-center justify-center gap-2 shadow-lg"
+                >
+                  View My Work <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link 
+                  to="/contact"
+                  className="border-2 border-black bg-white text-black px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-gray-50 transition-all text-center"
+                >
+                  Get In Touch
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
         
         {/* Diagonal accent lines */}
@@ -145,41 +176,6 @@ export default function HomePage() {
             </Link>
           </motion.div>
         </div>
-      </section>
-      {/* Profile Section - Moved above Tech Stack */}
-      <section className="py-20 px-4 max-w-[120rem] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          {/* Heading above photo */}
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-              I'm Akhil Nenavath
-            </h2>
-            <div className="w-24 h-1 bg-black mx-auto mt-4 rounded-full"></div>
-          </div>
-
-          {/* Highlighted Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative group">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gray-300 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-              
-              {/* Image container */}
-              <div className="relative bg-white rounded-full p-2">
-                <Image
-                  src="https://static.wixstatic.com/media/e6a693_a094366e46494a0e8518891f93ca4ea6~mv2.png"
-                  alt="Akhil Nenavath - Professional Developer"
-                  width={200}
-                  className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-gray-200 shadow-lg group-hover:shadow-xl transition-all duration-500"
-                />
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </section>
       {/* Tech Stack Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
