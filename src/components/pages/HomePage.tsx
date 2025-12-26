@@ -68,17 +68,16 @@ export default function HomePage() {
               className="flex flex-col items-center lg:items-start space-y-8"
             >
               <div className="space-y-6">
-                <p className="font-paragraph text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 text-center lg:text-left">
-                  trying to be a full stack developer
-                </p>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 text-center lg:text-left">
+                  Introduction
+                </h2>
                 
                 <p className="font-paragraph text-base md:text-lg text-gray-600 text-center lg:text-left max-w-xl">
-                  Crafting digital experiences with modern technologies. 
-                  Passionate about clean code, innovative solutions, and continuous learning.
+                  I am pursuing B.Tech in Computer Science and Engineering at Sreenidhi Institute of Science and Technology. I am currently learning Full Stack Development and building skills in both front-end and back-end technologies. I come from Devarakonda, Nalgonda district, and I am passionate about improving my technical skills and growing as a software professional.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto pt-8">
                 <Link 
                   to="/projects"
                   className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all flex items-center justify-center gap-2 shadow-lg"
