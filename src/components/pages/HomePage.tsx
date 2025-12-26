@@ -40,7 +40,7 @@ export default function HomePage() {
               className="flex flex-col items-center lg:items-start space-y-8"
             >
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center lg:text-left">
-                Hi I'm Akhil Nenavath
+                <span className="font-normal">Hi</span> I'm Akhil Nenavath
               </h1>
               
               {/* Profile Image */}
@@ -68,9 +68,8 @@ export default function HomePage() {
               className="flex flex-col items-center lg:items-start space-y-8"
             >
               <div className="space-y-6">
-                <p className="font-paragraph text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 text-center lg:text-left">
-                  trying to be a<br />
-                  <span className="text-gray-600">full stack developer</span>
+                <p className="font-paragraph text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 text-center lg:text-left">
+                  trying to be a full stack developer
                 </p>
                 
                 <p className="font-paragraph text-base md:text-lg text-gray-600 text-center lg:text-left max-w-xl">
@@ -239,6 +238,12 @@ export default function HomePage() {
               className="border-2 border-black bg-white text-black px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-gray-50 transition-all"
             >
               View My Portfolio
+            </Link>
+            <Link 
+              to="/sitemap"
+              className="border-2 border-black bg-white text-black px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-gray-50 transition-all"
+            >
+              visit details of this web
             </Link>
           </div>
         </motion.div>
