@@ -160,17 +160,49 @@ export default function AboutPage() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="glassmorphism-card text-center"
+            className="glassmorphism-card"
           >
-            <p className="font-paragraph text-lg leading-relaxed text-secondary">
+            <h3 className="font-heading text-2xl font-semibold mb-4 text-secondary">
+              Fresh Graduate & Aspiring Developer
+            </h3>
+            <p className="font-paragraph text-lg leading-relaxed text-secondary mb-4">
               I'm a fresher looking forward to starting my professional journey in software development. 
-              I'm eager to apply my academic knowledge and skills to real-world projects and contribute 
-              to innovative solutions while continuing to learn and grow in the field.
+              As a B.Tech student in Computer Science and Engineering, I have built a strong foundation 
+              in core programming concepts, data structures, and algorithms. I'm eager to apply my academic 
+              knowledge and skills to real-world projects and contribute to innovative solutions while 
+              continuing to learn and grow in the field.
+            </p>
+            <p className="font-paragraph text-lg leading-relaxed text-secondary">
+              My academic journey has equipped me with problem-solving abilities and a passion for creating 
+              efficient, scalable software solutions. I'm particularly interested in full-stack development 
+              and am committed to mastering both front-end and back-end technologies to become a well-rounded 
+              software engineer.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="glassmorphism-card"
+          >
+            <h3 className="font-heading text-2xl font-semibold mb-4 text-secondary">
+              What I'm Looking For
+            </h3>
+            <p className="font-paragraph text-lg leading-relaxed text-secondary mb-4">
+              I'm actively seeking opportunities to work with dynamic teams where I can contribute my 
+              technical skills and learn from experienced professionals. I'm open to roles in web development, 
+              software engineering, and any position that allows me to grow my expertise in modern technologies.
+            </p>
+            <p className="font-paragraph text-lg leading-relaxed text-secondary">
+              I believe in continuous learning and am committed to staying updated with the latest industry 
+              trends and best practices. Whether it's collaborating on challenging projects or mentoring from 
+              senior developers, I'm ready to make meaningful contributions to your organization.
             </p>
           </motion.div>
         </div>
