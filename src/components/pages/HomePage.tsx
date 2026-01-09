@@ -101,7 +101,7 @@ export default function HomePage() {
         <div className={`absolute top-1/3 right-0 w-full h-px bg-gradient-to-r ${theme === 'dark' ? 'from-transparent via-gray-600 to-transparent' : 'from-transparent via-gray-300 to-transparent'} transform rotate-6`}></div>
       </section>
       {/* Featured Sections */}
-      <section className={`py-20 px-4 max-w-[120rem] mx-auto ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+      <section className={`py-20 px-4 max-w-[120rem] mx-auto ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Projects Card */}
           <motion.div
