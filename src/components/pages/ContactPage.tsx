@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Clock, CheckCircle } from 'lucide-react';
+import { useThemeStore } from '@/stores/themeStore';
 
 export default function ContactPage() {
   const [showContactInfo, setShowContactInfo] = useState(false);
+  const { theme } = useThemeStore();
 
   const scrollToContactInfo = () => {
     setShowContactInfo(true);
@@ -183,7 +185,11 @@ export default function ContactPage() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-3 bg-white rounded-lg transition-colors ${social.color}`}
+                    className={`p-3 rounded-lg transition-colors ${
+                      theme === 'dark'
+                        ? 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
+                        : 'bg-white text-gray-900 hover:bg-gray-100 hover:text-gray-900'
+                    }`}
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6" />
