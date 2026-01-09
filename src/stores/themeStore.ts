@@ -27,9 +27,8 @@ export const useThemeStore = create<ThemeStore>()(
     {
       name: 'theme-storage',
       onRehydrateStorage: () => (state) => {
-        if (state) {
-          applyTheme(state.theme);
-        }
+        // Always default to light mode
+        applyTheme('light');
       },
     }
   )
