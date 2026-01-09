@@ -9,3 +9,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark mode styles */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark {
+  --background: 17 24 39;
+  --foreground: 243 244 246;
+}
+
+/* Apply dark mode to all pages */
+html.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+html.dark main {
+  @apply bg-gray-900 text-gray-100;
+}
+
+html.dark section {
+  @apply bg-gray-900 text-gray-100;
+}
+
