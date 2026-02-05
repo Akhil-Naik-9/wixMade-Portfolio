@@ -70,9 +70,9 @@ export default function HomePage() {
               className="flex flex-col items-center lg:items-start space-y-8"
             >
               <div className="space-y-6">
-                <h2 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left`}>
-                  Self-Introduction/About Me!
-                </h2>
+                <h2 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left max-w-2xl`}>
+                    Self-Introduction/About Me!
+                  </h2>
                 
                 <p className={`font-paragraph text-base md:text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} lg:text-left max-w-xl text-justify`}>Good evening. My name is Akhil Nenavath. I am currently studying in the third year of Computer Science and Engineering at Sreenidhi Institute of Science and Technology. Based on market demand as well as my personal interest, I chose full-stack development. Full-stack development mainly consists of three parts: frontend, backend, and database. As per fresher-level requirements, I have learned the necessary skills in each area. In the frontend, I have worked with HTML, CSS, and JavaScript. In the backend, I have knowledge of Core Java, Advanced Java, and basic programming algorithms. On the database side, I have a basic understanding of SQL, PL/SQL, and CRUD operations. I am continuously improving my technical and communication skills to become a skilled software developer.</p>
               </div>

@@ -21,7 +21,7 @@ export interface Certificates {
   credentialId?: string;
   /** @wixFieldType url */
   certificateUrl?: string;
-  /** @wixFieldType image */
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   certificateImage?: string;
   /** @wixFieldType text */
   description?: string;
@@ -48,7 +48,7 @@ export interface Coursework {
   courseDescription?: string;
   /** @wixFieldType url */
   certificateUrl?: string;
-  /** @wixFieldType image */
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   courseImage?: string;
 }
 
@@ -63,7 +63,7 @@ export interface Projects {
   _updatedDate?: Date;
   /** @wixFieldType text */
   projectName?: string;
-  /** @wixFieldType image */
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   projectImage?: string;
   /** @wixFieldType text */
   shortDescription?: string;
