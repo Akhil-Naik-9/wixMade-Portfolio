@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Briefcase, Award } from 'lucide-react';
+import { ArrowRight, Code, Briefcase, Award, Flower2, Wind } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import { useThemeStore } from '@/stores/themeStore';
 
@@ -26,8 +26,52 @@ export default function HomePage() {
 
   const title = "Full Stack Developer";
 
+  // Floating elements animation
+  const floatingElements = [
+    { id: 1, delay: 0, x: -100, y: -50, duration: 6 },
+    { id: 2, delay: 0.5, x: 150, y: -80, duration: 7 },
+    { id: 3, delay: 1, x: -80, y: 100, duration: 8 },
+    { id: 4, delay: 1.5, x: 120, y: 80, duration: 6.5 },
+    { id: 5, delay: 2, x: -120, y: 50, duration: 7.5 },
+  ];
+
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
+      {/* Floating Greeting Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        {floatingElements.map((element) => (
+          <motion.div
+            key={element.id}
+            initial={{ 
+              opacity: 0, 
+              y: 100,
+              x: 0
+            }}
+            animate={{ 
+              opacity: [0, 1, 1, 0],
+              y: element.y,
+              x: element.x,
+            }}
+            transition={{
+              duration: element.duration,
+              delay: element.delay,
+              ease: "easeInOut"
+            }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            {element.id % 2 === 0 ? (
+              <Flower2 
+                className={`w-12 h-12 ${theme === 'dark' ? 'text-blue-400/60' : 'text-blue-500/60'}`}
+              />
+            ) : (
+              <Wind 
+                className={`w-12 h-12 ${theme === 'dark' ? 'text-purple-400/60' : 'text-purple-500/60'}`}
+              />
+            )}
+          </motion.div>
+        ))}
+      </div>
+
       {/* Hero Section - Horizontal Layout */}
       <section className={`relative overflow-hidden ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
         <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-gradient-to-br from-gray-800/50 via-gray-900/30 to-gray-800/50' : 'bg-gradient-to-br from-gray-100/50 via-gray-50/30 to-gray-100/50'}`}></div>
