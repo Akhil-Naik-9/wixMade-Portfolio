@@ -28,71 +28,70 @@ export default function HomePage() {
 
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
-      {/* Hero Section - Two Column Layout */}
-      <section className="h-screen grid place-items-center relative overflow-hidden" style={{ backgroundColor: theme === 'dark' ? '#111827' : '#ffffff' }}>
+      {/* Hero Section - Horizontal Layout */}
+      <section className={`relative overflow-hidden ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
         <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-gradient-to-br from-gray-800/50 via-gray-900/30 to-gray-800/50' : 'bg-gradient-to-br from-gray-100/50 via-gray-50/30 to-gray-100/50'}`}></div>
         <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-gradient-to-tr from-gray-900/30 via-transparent to-gray-800/40' : 'bg-gradient-to-tr from-gray-50/30 via-transparent to-gray-100/40'}`}></div>
-        <div className="z-10 max-w-6xl mx-auto px-4 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-            {/* Left Side - Name and Profile Picture */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center lg:items-start space-y-8"
-            >
-              <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left`}>
-                <span className="font-normal">Hi</span> I'm Akhil Nenavath
-              </h1>
+        
+        <div className="z-10 max-w-[120rem] mx-auto px-4 py-24">
+          {/* Introduction Section */}
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center lg:items-start space-y-8 mb-24"
+          >
+            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left`}>
+              <span className="font-normal">Hi</span> I'm Akhil Nenavath
+            </h1>
+            
+            {/* Profile Image */}
+            <div className="relative group">
+              {/* Glowing border effect */}
+              <div className={`absolute -inset-1 ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'} rounded-full blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200`}></div>
               
-              {/* Profile Image */}
-              <div className="relative group">
-                {/* Glowing border effect */}
-                <div className={`absolute -inset-1 ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'} rounded-full blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200`}></div>
-                
-                {/* Image container */}
-                <div className={`relative ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-full p-2`}>
-                  <Image
-                    src="https://static.wixstatic.com/media/e6a693_65e7d4ea8cfe41b09718e3e1d6bb0256~mv2.png"
-                    alt="Akhil Nenavath - Professional Developer"
-                    width={200}
-                    className={`w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'} shadow-lg group-hover:shadow-xl transition-all duration-500`}
-                  />
-                </div>
+              {/* Image container */}
+              <div className={`relative ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-full p-2`}>
+                <Image
+                  src="https://static.wixstatic.com/media/e6a693_65e7d4ea8cfe41b09718e3e1d6bb0256~mv2.png"
+                  alt="Akhil Nenavath - Professional Developer"
+                  width={200}
+                  className={`w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full border-4 ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'} shadow-lg group-hover:shadow-xl transition-all duration-500`}
+                />
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* Right Side - Subtitle and CTA */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col items-center lg:items-start space-y-8"
-            >
-              <div className="space-y-6">
-                <h2 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left max-w-2xl`}>
-                    Self-Introduction/About Me!
-                  </h2>
-                
-                <p className={`font-paragraph text-base md:text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} lg:text-left max-w-xl text-justify`}>Good evening. My name is Akhil Nenavath. I am currently studying in the third year of Computer Science and Engineering at Sreenidhi Institute of Science and Technology. Based on market demand as well as my personal interest, I chose full-stack development. Full-stack development mainly consists of three parts: frontend, backend, and database. As per fresher-level requirements, I have learned the necessary skills in each area. In the frontend, I have worked with HTML, CSS, and JavaScript. In the backend, I have knowledge of Core Java, Advanced Java, and basic programming algorithms. On the database side, I have a basic understanding of SQL, PL/SQL, and CRUD operations. I am continuously improving my technical and communication skills to become a skilled software developer.</p>
-              </div>
+          {/* Self-Introduction Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col items-center lg:items-start space-y-8 pb-24"
+          >
+            <div className="space-y-6 max-w-4xl">
+              <h2 className={`font-heading text-4xl md:text-5xl lg:text-5xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center lg:text-left`}>
+                Self-Introduction/About Me!
+              </h2>
               
-              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto pt-8">
-                <Link 
-                  to="/projects"
-                  className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-8 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg`}
-                >
-                  View My Work <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link 
-                  to="/contact"
-                  className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-8 py-3 rounded-lg font-paragraph font-medium transition-all text-center`}
-                >
-                  Get In Touch
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+              <p className={`font-paragraph text-base md:text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} lg:text-left text-justify leading-relaxed`}>Good evening. My name is Akhil Nenavath. I am currently studying in the third year of Computer Science and Engineering at Sreenidhi Institute of Science and Technology. Based on market demand as well as my personal interest, I chose full-stack development. Full-stack development mainly consists of three parts: frontend, backend, and database. As per fresher-level requirements, I have learned the necessary skills in each area. In the frontend, I have worked with HTML, CSS, and JavaScript. In the backend, I have knowledge of Core Java, Advanced Java, and basic programming algorithms. On the database side, I have a basic understanding of SQL, PL/SQL, and CRUD operations. I am continuously improving my technical and communication skills to become a skilled software developer.</p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto pt-8">
+              <Link 
+                to="/projects"
+                className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-8 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg`}
+              >
+                View My Work <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link 
+                to="/contact"
+                className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-8 py-3 rounded-lg font-paragraph font-medium transition-all text-center`}
+              >
+                Get In Touch
+              </Link>
+            </div>
+          </motion.div>
         </div>
         
         {/* Diagonal accent lines */}
