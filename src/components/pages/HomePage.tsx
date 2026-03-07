@@ -122,23 +122,23 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Call-to-Action Section - Horizontal Layout */}
+          {/* Call-to-Action Section - Centered and Side by Side */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col items-center lg:items-start pb-24"
+            className="flex flex-col items-center pb-24"
           >
-            <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-center justify-start">
+            <div className="w-full flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center">
               <Link 
                 to="/projects"
-                className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-10 py-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg whitespace-nowrap w-full lg:w-auto`}
+                className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-10 py-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg whitespace-nowrap w-full sm:w-auto`}
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
               <Link 
                 to="/contact"
-                className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-10 py-4 rounded-lg font-paragraph font-medium transition-all text-center whitespace-nowrap w-full lg:w-auto`}
+                className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-10 py-4 rounded-lg font-paragraph font-medium transition-all text-center whitespace-nowrap w-full sm:w-auto`}
               >
                 Get In Touch
               </Link>
