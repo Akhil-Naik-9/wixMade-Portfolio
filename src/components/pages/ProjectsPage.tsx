@@ -165,10 +165,10 @@ export default function ProjectsPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-background border border-foreground/10 rounded-lg px-4 py-3 font-paragraph text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors cursor-pointer hover:border-foreground/20"
+                className="bg-background border border-foreground/10 rounded-lg px-4 py-3 font-paragraph text-sm text-black focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors cursor-pointer hover:border-foreground/20"
               >
                 {categories.map(category => (
-                  <option key={category} value={category} className="bg-background text-foreground">
+                  <option key={category} value={category} className="bg-background text-black">
                     {category}
                   </option>
                 ))}
