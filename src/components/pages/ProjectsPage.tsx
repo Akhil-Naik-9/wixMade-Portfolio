@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { BaseCrudService } from '@/integrations';
-import { Projects } from '@/entities';
 import { Image } from '@/components/ui/image';
+import { Projects } from '@/entities';
+import { BaseCrudService } from '@/integrations';
+import { motion } from 'framer-motion';
+import { Calendar, ExternalLink, Filter, Github, Search, Tag } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function ProjectsPage() {
   const [projects, setProjects] = useState<Projects[]>([]);
@@ -13,7 +12,7 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const projectsPerPage = 6;
 
   useEffect(() => {
@@ -28,21 +27,21 @@ export default function ProjectsPage() {
     try {
       setIsLoading(true);
       const { items } = await BaseCrudService.getAll<Projects>('projects');
-      
+
       // Filter out specific projects that should not be displayed
       const projectsToExclude = [
         'Image Gallery',
-        'Product Landing Page', 
+        'Product Landing Page',
         'Interactive Quiz Application',
         'Weather Dashboard'
       ];
-      
-      const filteredItems = items.filter(project => 
-        !projectsToExclude.some(excludedName => 
+
+      const filteredItems = items.filter(project =>
+        !projectsToExclude.some(excludedName =>
           project.projectName?.toLowerCase().includes(excludedName.toLowerCase())
         )
       );
-      
+
       setProjects(filteredItems);
     } catch (error) {
       console.error('Error loading projects:', error);
@@ -82,9 +81,9 @@ export default function ProjectsPage() {
 
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return '';
-    return new Date(date).toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short' 
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short'
     });
   };
 
@@ -105,7 +104,7 @@ export default function ProjectsPage() {
 
     // Convert project name to lowercase and replace spaces with hyphens
     const imageName = projectName.toLowerCase().replace(/\s+/g, '-');
-    
+
     // Return the mapped image URL or a default if not found
     return projectImageMap[imageName] || "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
   };
@@ -132,7 +131,7 @@ export default function ProjectsPage() {
           className="text-center mb-16"
         >
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-            A collection of web applications, mobile apps, and creative coding projects 
+            A collection of web applications, mobile apps, and creative coding projects
             that showcase my skills and passion for development.
           </p>
         <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
@@ -166,7 +165,7 @@ export default function ProjectsPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-3 font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
+                className="bg-foreground/50 border border-foreground/10 rounded-lg px-4 py-3 font-paragraph text-sm focus:outline-none focus:border-primary transition-colors"
               >
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-background">
@@ -297,7 +296,7 @@ export default function ProjectsPage() {
             >
               Previous
             </button>
-            
+
             <div className="flex gap-2">
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                 <button
@@ -313,7 +312,7 @@ export default function ProjectsPage() {
                 </button>
               ))}
             </div>
-            
+
             <button
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
