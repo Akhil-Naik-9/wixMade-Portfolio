@@ -22,11 +22,11 @@ export default function HomePage() {
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center`}>
               <span className="font-normal">Hi</span> I'm Akhil Nenavath
             </h1>
-            
+
             {/* Profile Image */}
             <div className="relative group">
               <div className={`absolute -inset-1 ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'} rounded-full blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200`}></div>
-              
+
               <div className={`relative ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-full p-2`}>
                 <Image
                   src="https://static.wixstatic.com/media/e6a693_65e7d4ea8cfe41b09718e3e1d6bb0256~mv2.png"
@@ -47,9 +47,9 @@ export default function HomePage() {
           >
             <div className="space-y-6 max-w-4xl">
               <h2 className={`font-heading text-4xl md:text-5xl lg:text-5xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center`}>
-                Self-Introduction/About Me!
+                Self-Introduction (About Me!)
               </h2>
-              
+
               <p className={`font-paragraph text-base md:text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} text-center leading-relaxed`}>Good evening. My name is Akhil Nenavath. I am currently studying in the third year of Computer Science and Engineering at Sreenidhi Institute of Science and Technology. Based on market demand as well as my personal interest, I chose full-stack development. Full-stack development mainly consists of three parts: frontend, backend, and database. As per fresher-level requirements, I have learned the necessary skills in each area. In the frontend, I have worked with HTML, CSS, and JavaScript. In the backend, I have knowledge of Core Java, Advanced Java, and basic programming algorithms. On the database side, I have a basic understanding of SQL, PL/SQL, and CRUD operations. I am continuously improving my technical and communication skills to become a skilled software developer.</p>
             </div>
           </motion.div>
@@ -62,13 +62,13 @@ export default function HomePage() {
             className="flex flex-col items-center pb-24"
           >
             <div className="w-full flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center">
-              <Link 
+              <Link
                 to="/projects"
                 className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-10 py-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg whitespace-nowrap w-full sm:w-auto`}
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link 
+              <Link
                 to="/contact"
                 className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-10 py-4 rounded-lg font-paragraph font-medium transition-all text-center whitespace-nowrap w-full sm:w-auto`}
               >
@@ -205,13 +205,13 @@ export default function HomePage() {
             I'm always interested in new opportunities and collaborations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               to="/contact"
               className={`${theme === 'dark' ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-900'} px-8 py-3 rounded-lg font-paragraph font-medium transition-all shadow-lg`}
             >
               Start a Conversation
             </Link>
-            <Link 
+            <Link
               to="/projects"
               className={`border-2 ${theme === 'dark' ? 'border-white bg-gray-900 text-white hover:bg-gray-800' : 'border-black bg-white text-black hover:bg-gray-50'} px-8 py-3 rounded-lg font-paragraph font-medium transition-all`}
             >
