@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
-import { Download, MapPin, Calendar, Mail, Phone, ExternalLink, Eye } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, ExternalLink, Eye } from 'lucide-react';
 import { Image } from '@/components/ui/image';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
-  const [imageError, setImageError] = useState(false);
 
   const skills = {
     frontend: ['HTML5', 'CSS', 'JavaScript'],
@@ -77,13 +75,11 @@ export default function AboutPage() {
           >
             <div className="glassmorphism-card">
               <Image
-                src={imageError ? "https://static.wixstatic.com/media/e6a693_99e3256982b541c4abe4b3d6e8c1dec7~mv2.png?originWidth=384&originHeight=384" : "https://static.wixstatic.com/media/e6a693_b4b0f7ce9f5d47ecb63841098e35fdaa~mv2.jpg"}
+                src="https://static.wixstatic.com/media/e6a693_b4b0f7ce9f5d47ecb63841098e35fdaa~mv2.jpg"
                 alt="Akhil Nenavath - Full Stack Developer"
                 width={400}
-                className="w-full h-96 object-cover object-top scale-110 rounded-xl mb-6 border-[0px] border-[undefined] border-none"
-                onError={() => setImageError(true)}
-                focalPointX={49.999947471937965}
-                focalPointY={47.59764155830116} />
+                className="w-full h-96 object-cover object-top scale-110 rounded-xl mb-6"
+              />
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-foreground/70">
                   <MapPin className="w-4 h-4 text-primary" />

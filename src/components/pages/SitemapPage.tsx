@@ -65,8 +65,7 @@ export default function SitemapPage() {
 
   const externalLinks = [
     { name: 'GitHub Profile', url: 'https://github.com/Akhil-Naik-9', description: 'Source code repositories' },
-    { name: 'LinkedIn Profile', url: 'https://www.linkedin.com/in/akhil-nenavath-78430a2ba', description: 'Professional network profile' },
-    { name: 'Resume/CV', url: '#', description: 'Downloadable resume document' }
+    { name: 'LinkedIn Profile', url: 'https://www.linkedin.com/in/akhil-nenavath-78430a2ba', description: 'Professional network profile' }
   ];
 
   const lastUpdated = new Date().toLocaleDateString('en-US', {

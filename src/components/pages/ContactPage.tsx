@@ -1,22 +1,9 @@
 import { useThemeStore } from '@/stores/themeStore';
 import { motion } from 'framer-motion';
 import { CheckCircle, Clock, Github, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import { useState } from 'react';
 
 export default function ContactPage() {
-  const [showContactInfo, setShowContactInfo] = useState(false);
   const { theme } = useThemeStore();
-
-  const scrollToContactInfo = () => {
-    setShowContactInfo(true);
-    // Small delay to ensure the element is rendered before scrolling
-    setTimeout(() => {
-      const contactInfoElement = document.getElementById('contact-information');
-      if (contactInfoElement) {
-        contactInfoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }, 100);
-  };
 
   const contactInfo = [
     {
@@ -74,81 +61,42 @@ export default function ContactPage() {
             Get In <span className="text-primary">Touch</span>
           </h1>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
-            Let's discuss your project and explore
-            how we can work together to create something amazing.
+            Let's discuss your project and explore how we can work together to create something amazing.
           </p>
         </motion.div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Contact Information - Show after Email Now is clicked */}
-          {showContactInfo && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div id="contact-information" className="glassmorphism-card">
-                <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
-                  Contact Information
-                </h3>
-                <div className="space-y-4">
-                  {contactInfo.map((info) => (
-                    <a
-                      key={info.label}
-                      href={info.href}
-                      target={info.href.startsWith('http') ? '_blank' : undefined}
-                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
-                    >
-                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <info.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
-                        <p className="font-paragraph font-medium">{info.value}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Always visible sections */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            {/* Contact Details - Only show if not already shown above */}
-            {!showContactInfo && (
-              <div className="glassmorphism-card">
-                <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
-                  Contact Information
-                </h3>
-                <div className="space-y-4">
-                  {contactInfo.map((info) => (
-                    <a
-                      key={info.label}
-                      href={info.href}
-                      target={info.href.startsWith('http') ? '_blank' : undefined}
-                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group text-primary-foreground"
-                    >
-                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <info.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-paragraph text-sm text-primary-foreground">{info.label}</p>
-                        <p className="font-paragraph font-medium">{info.value}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+            {/* Contact Details */}
+            <div className="glassmorphism-card">
+              <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
+                Contact Information
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((info) => (
+                  <a
+                    key={info.label}
+                    href={info.href}
+                    target={info.href.startsWith('http') ? '_blank' : undefined}
+                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="flex items-center gap-4 p-3 bg-foreground/5 rounded-lg hover:bg-primary/10 transition-colors group"
+                  >
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-paragraph text-sm text-foreground/70">{info.label}</p>
+                      <p className="font-paragraph font-medium">{info.value}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-            )}
+            </div>
 
             {/* Availability */}
             <div className="glassmorphism-card">
@@ -203,6 +151,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 max-w-[120rem] mx-auto">
         <motion.div
@@ -219,13 +168,13 @@ export default function ContactPage() {
             Let's schedule a call to discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={scrollToContactInfo}
+            <a
+              href="mailto:naika0362@gmail.com"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
               Mail Me Directly
-            </button>
+            </a>
             <a
               href="tel:+919908988488"
               className="border border-secondary text-secondary px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-secondary/10 transition-colors inline-flex items-center gap-2 justify-center"

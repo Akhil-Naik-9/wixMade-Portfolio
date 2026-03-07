@@ -18,96 +18,6 @@ interface ProgrammingLanguage {
   lucideIcon: React.ReactNode;
 }
 
-const programmingLanguages: ProgrammingLanguage[] = [
-  {
-    id: 'java',
-    name: 'Java',
-    description: 'A versatile, object-oriented programming language known for its platform independence and robust ecosystem. Widely used in enterprise applications, Android development, and large-scale systems.',
-    proficiencyLevel: 'Advanced',
-    yearsOfExperience: 4,
-    keyFeatures: [
-      'Object-Oriented Programming',
-      'Platform Independence (Write Once, Run Anywhere)',
-      'Strong Memory Management',
-      'Rich Standard Library',
-      'Multithreading Support',
-      'Enterprise-Grade Security'
-    ],
-    projects: [
-      'E-commerce Web Application',
-      'RESTful API Services',
-      'Spring Boot Microservices',
-      'Android Mobile Apps'
-    ],
-    resources: [
-      { name: 'Oracle Java Documentation', url: 'https://docs.oracle.com/en/java/' },
-      { name: 'Spring Framework', url: 'https://spring.io/' },
-      { name: 'Java Code Geeks', url: 'https://www.javacodegeeks.com/' }
-    ],
-    icon: '☕',
-    color: 'from-orange-500 to-red-600',
-    lucideIcon: <Coffee className="w-6 h-6" />
-  },
-  {
-    id: 'c',
-    name: 'C',
-    description: 'A foundational programming language that provides low-level access to memory and system resources. Essential for system programming, embedded systems, and understanding computer fundamentals.',
-    proficiencyLevel: 'Intermediate',
-    yearsOfExperience: 3,
-    keyFeatures: [
-      'Low-Level Memory Management',
-      'Procedural Programming Paradigm',
-      'Minimal Runtime Dependencies',
-      'Direct Hardware Access',
-      'Efficient Performance',
-      'Foundation for Other Languages'
-    ],
-    projects: [
-      'System Utilities',
-      'Embedded System Programs',
-      'Data Structures Implementation',
-      'Operating System Components'
-    ],
-    resources: [
-      { name: 'C Programming Language (K&R)', url: 'https://en.wikipedia.org/wiki/The_C_Programming_Language' },
-      { name: 'GNU C Library', url: 'https://www.gnu.org/software/libc/' },
-      { name: 'Learn C Programming', url: 'https://www.learn-c.org/' }
-    ],
-    icon: '⚡',
-    color: 'from-blue-500 to-purple-600',
-    lucideIcon: <Zap className="w-6 h-6" />
-  },
-  {
-    id: 'java-core',
-    name: 'Java Core',
-    description: 'Deep understanding of Java fundamentals including JVM internals, garbage collection, concurrency, and advanced language features. Focus on core concepts that power enterprise Java applications.',
-    proficiencyLevel: 'Expert',
-    yearsOfExperience: 4,
-    keyFeatures: [
-      'JVM Architecture & Internals',
-      'Garbage Collection Optimization',
-      'Concurrency & Threading',
-      'Collections Framework Mastery',
-      'Design Patterns Implementation',
-      'Performance Tuning'
-    ],
-    projects: [
-      'High-Performance Web Services',
-      'Concurrent Data Processing Systems',
-      'Custom Framework Development',
-      'JVM Performance Optimization'
-    ],
-    resources: [
-      { name: 'Effective Java by Joshua Bloch', url: 'https://www.oreilly.com/library/view/effective-java/9780134686097/' },
-      { name: 'Java Concurrency in Practice', url: 'https://jcip.net/' },
-      { name: 'OpenJDK Documentation', url: 'https://openjdk.org/' }
-    ],
-    icon: '🚀',
-    color: 'from-green-500 to-teal-600',
-    lucideIcon: <Rocket className="w-6 h-6" />
-  }
-];
-
 const proficiencyColors = {
   'Beginner': 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
   'Intermediate': 'bg-blue-500/20 text-blue-300 border-blue-500/30',
@@ -116,7 +26,95 @@ const proficiencyColors = {
 };
 
 export default function ProgrammingLanguagesPage() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+  const programmingLanguages: ProgrammingLanguage[] = [
+    {
+      id: 'java',
+      name: 'Java',
+      description: 'A versatile, object-oriented programming language known for its platform independence and robust ecosystem. Widely used in enterprise applications, Android development, and large-scale systems.',
+      proficiencyLevel: 'Advanced',
+      yearsOfExperience: 4,
+      keyFeatures: [
+        'Object-Oriented Programming',
+        'Platform Independence (Write Once, Run Anywhere)',
+        'Strong Memory Management',
+        'Rich Standard Library',
+        'Multithreading Support',
+        'Enterprise-Grade Security'
+      ],
+      projects: [
+        'E-commerce Web Application',
+        'RESTful API Services',
+        'Spring Boot Microservices',
+        'Android Mobile Apps'
+      ],
+      resources: [
+        { name: 'Oracle Java Documentation', url: 'https://docs.oracle.com/en/java/' },
+        { name: 'Spring Framework', url: 'https://spring.io/' },
+        { name: 'Java Code Geeks', url: 'https://www.javacodegeeks.com/' }
+      ],
+      icon: '☕',
+      color: 'from-orange-500 to-red-600',
+      lucideIcon: <Coffee className="w-6 h-6" />
+    },
+    {
+      id: 'c',
+      name: 'C',
+      description: 'A foundational programming language that provides low-level access to memory and system resources. Essential for system programming, embedded systems, and understanding computer fundamentals.',
+      proficiencyLevel: 'Intermediate',
+      yearsOfExperience: 3,
+      keyFeatures: [
+        'Low-Level Memory Management',
+        'Procedural Programming Paradigm',
+        'Minimal Runtime Dependencies',
+        'Direct Hardware Access',
+        'Efficient Performance',
+        'Foundation for Other Languages'
+      ],
+      projects: [
+        'System Utilities',
+        'Embedded System Programs',
+        'Data Structures Implementation',
+        'Operating System Components'
+      ],
+      resources: [
+        { name: 'C Programming Language (K&R)', url: 'https://en.wikipedia.org/wiki/The_C_Programming_Language' },
+        { name: 'GNU C Library', url: 'https://www.gnu.org/software/libc/' },
+        { name: 'Learn C Programming', url: 'https://www.learn-c.org/' }
+      ],
+      icon: '⚡',
+      color: 'from-blue-500 to-purple-600',
+      lucideIcon: <Zap className="w-6 h-6" />
+    },
+    {
+      id: 'java-core',
+      name: 'Java Core',
+      description: 'Deep understanding of Java fundamentals including JVM internals, garbage collection, concurrency, and advanced language features. Focus on core concepts that power enterprise Java applications.',
+      proficiencyLevel: 'Expert',
+      yearsOfExperience: 4,
+      keyFeatures: [
+        'JVM Architecture & Internals',
+        'Garbage Collection Optimization',
+        'Concurrency & Threading',
+        'Collections Framework Mastery',
+        'Design Patterns Implementation',
+        'Performance Tuning'
+      ],
+      projects: [
+        'High-Performance Web Services',
+        'Concurrent Data Processing Systems',
+        'Custom Framework Development',
+        'JVM Performance Optimization'
+      ],
+      resources: [
+        { name: 'Effective Java by Joshua Bloch', url: 'https://www.oreilly.com/library/view/effective-java/9780134686097/' },
+        { name: 'Java Concurrency in Practice', url: 'https://jcip.net/' },
+        { name: 'OpenJDK Documentation', url: 'https://openjdk.org/' }
+      ],
+      icon: '🚀',
+      color: 'from-green-500 to-teal-600',
+      lucideIcon: <Rocket className="w-6 h-6" />
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
