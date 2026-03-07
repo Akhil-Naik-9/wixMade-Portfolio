@@ -224,7 +224,7 @@ export default function ContactPage() {
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
-              mail Me Directly
+              Mail Me Directly
             </button>
             <a
               href="tel:+919908988488"
