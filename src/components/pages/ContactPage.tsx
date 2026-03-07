@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Clock, CheckCircle } from 'lucide-react';
 import { useThemeStore } from '@/stores/themeStore';
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Github, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ContactPage() {
   const [showContactInfo, setShowContactInfo] = useState(false);
@@ -74,7 +74,7 @@ export default function ContactPage() {
             Get In <span className="text-primary">Touch</span>
           </h1>
           <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
-            Let's discuss your project and explore 
+            Let's discuss your project and explore
             how we can work together to create something amazing.
           </p>
         </motion.div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
             Let's Work Together
           </h2>
           <p className="font-paragraph text-lg mb-8 max-w-2xl mx-auto text-primary-foreground">
-            Whether you have a detailed specification or just an idea, I'd love to hear about it. 
+            Whether you have a detailed specification or just an idea, I'd love to hear about it.
             Let's schedule a call to discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +224,7 @@ export default function ContactPage() {
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-paragraph font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 justify-center"
             >
               <Mail className="w-4 h-4" />
-              Email Me Directly
+              mail Me Directly
             </button>
             <a
               href="tel:+919908988488"
