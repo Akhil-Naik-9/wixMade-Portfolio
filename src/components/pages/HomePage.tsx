@@ -13,12 +13,7 @@ export default function HomePage() {
       <section className={`relative overflow-hidden ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="z-10 max-w-[120rem] mx-auto px-4 py-24">
           {/* Introduction Section */}
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center space-y-8 mb-24"
-          >
+          <div className="flex flex-col items-center space-y-8 mb-24">
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-center`}>
               <span className="font-normal">Hi</span> I'm Akhil Nenavath
             </h1>
@@ -36,7 +31,7 @@ export default function HomePage() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Self-Introduction Section */}
           <motion.div
