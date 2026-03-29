@@ -27,7 +27,13 @@ export default function ProjectsPage() {
     try {
       setIsLoading(true);
       const { items } = await BaseCrudService.getAll<Projects>('projects');
-      setProjects(items);
+      // Sort projects by sortOrder field (ascending)
+      const sortedItems = items.sort((a, b) => {
+        const orderA = (a as any).sortOrder ?? 100;
+        const orderB = (b as any).sortOrder ?? 100;
+        return orderA - orderB;
+      });
+      setProjects(sortedItems);
     } finally {
       setIsLoading(false);
     }

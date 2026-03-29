@@ -63,6 +63,8 @@ export interface Projects {
   _updatedDate?: Date;
   /** @wixFieldType text */
   projectName?: string;
+  /** @wixFieldType number */
+  sortOrder?: number;
   /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   projectImage?: string;
   /** @wixFieldType text */
