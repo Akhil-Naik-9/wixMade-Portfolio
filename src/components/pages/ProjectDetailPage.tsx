@@ -113,7 +113,7 @@ export default function ProjectDetailPage() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="glassmorphism-card p-0 overflow-hidden">
+            <div className="glassmorphism-card p-0 overflow-hidden block-hover-border">
               <Image
                 src={getProjectImageUrl(project.projectName)}
                 alt={project.projectName || 'Project'}
@@ -204,7 +204,7 @@ export default function ProjectDetailPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="glassmorphism-card"
+              className="glassmorphism-card block-hover-border"
             >
               <h2 className="font-heading text-2xl font-semibold mb-6 text-primary">
                 Project Overview
@@ -225,7 +225,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="glassmorphism-card"
+                className="glassmorphism-card block-hover-border"
               >
                 <h3 className="font-heading text-lg font-semibold mb-4 text-secondary">
                   Technologies Used
@@ -248,7 +248,7 @@ export default function ProjectDetailPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="glassmorphism-card"
+              className="glassmorphism-card block-hover-border"
             >
               <h3 className="font-heading text-lg font-semibold mb-4 text-secondary">
                 Project Links
@@ -284,7 +284,7 @@ export default function ProjectDetailPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="glassmorphism-card"
+              className="glassmorphism-card block-hover-border"
             >
               <h3 className="font-heading text-lg font-semibold mb-4 text-secondary">
                 Project Details
@@ -320,7 +320,7 @@ export default function ProjectDetailPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="glassmorphism-card text-center"
+          className="glassmorphism-card text-center block-hover-border"
         >
           <h3 className="font-heading text-xl font-semibold mb-6">
             Explore More Projects

@@ -73,7 +73,7 @@ export default function ContactPage() {
             className="space-y-8"
           >
             {/* Contact Details */}
-            <div className="glassmorphism-card">
+            <div className="glassmorphism-card block-hover-border">
               <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
                 Contact Information
               </h3>
@@ -99,7 +99,7 @@ export default function ContactPage() {
             </div>
 
             {/* Availability */}
-            <div className="glassmorphism-card">
+            <div className="glassmorphism-card block-hover-border">
               <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
                 Availability
               </h3>
@@ -122,7 +122,7 @@ export default function ContactPage() {
             </div>
 
             {/* Social Links */}
-            <div className="glassmorphism-card">
+            <div className="glassmorphism-card block-hover-border">
               <h3 className="font-heading text-xl font-semibold mb-6 text-secondary">
                 Connect Online
               </h3>
@@ -158,7 +158,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="glassmorphism-card text-center max-w-4xl mx-auto"
+          className="glassmorphism-card text-center max-w-4xl mx-auto block-hover-border"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
             Let's Work Together

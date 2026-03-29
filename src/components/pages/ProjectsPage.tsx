@@ -158,7 +158,7 @@ export default function ProjectsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glassmorphism-card group hover:border-primary/30 transition-all duration-300"
+              className="glassmorphism-card group hover:shadow-md transition-all duration-300 block-hover-border"
             >
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-xl mb-6">

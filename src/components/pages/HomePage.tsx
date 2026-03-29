@@ -82,7 +82,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all`}
+            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all block-hover-border`}
           >
             <Link to="/projects" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -105,7 +105,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all`}
+            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all block-hover-border`}
           >
             <Link to="/about" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -128,7 +128,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all`}
+            className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg p-6 group cursor-pointer hover:shadow-md transition-all block-hover-border`}
           >
             <Link to="/certificates" className="block h-full">
               <div className="flex items-center gap-4 mb-4">
@@ -177,7 +177,7 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'} border text-center p-6 hover:shadow-md transition-all group relative overflow-hidden rounded-lg`}
+              className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border text-center p-6 hover:shadow-md transition-all group relative overflow-hidden rounded-lg block-hover-border`}
             >
               <span className={`font-paragraph font-medium text-sm relative z-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{skill.name}</span>
             </motion.div>
@@ -191,7 +191,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg text-center max-w-4xl mx-auto p-12`}
+          className={`${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg text-center max-w-4xl mx-auto p-12 block-hover-border`}
         >
           <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             Let's Connect

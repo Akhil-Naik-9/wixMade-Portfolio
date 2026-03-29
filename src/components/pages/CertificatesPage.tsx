@@ -94,7 +94,7 @@ export default function CertificatesPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
         >
-          <div className="glassmorphism-card text-center">
+          <div className="glassmorphism-card text-center block-hover-border">
             <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
               <Award className="w-6 h-6 text-primary" />
             </div>
@@ -104,7 +104,7 @@ export default function CertificatesPage() {
             <p className="font-paragraph text-secondary">Total Certificates</p>
           </div>
           
-          <div className="glassmorphism-card text-center">
+          <div className="glassmorphism-card text-center block-hover-border">
             <div className="p-3 bg-secondary/10 rounded-lg w-fit mx-auto mb-4">
               <Building className="w-6 h-6 text-secondary" />
             </div>
@@ -114,7 +114,7 @@ export default function CertificatesPage() {
             <p className="font-paragraph text-secondary">Issuing Organizations</p>
           </div>
           
-          <div className="glassmorphism-card text-center">
+          <div className="glassmorphism-card text-center block-hover-border">
             <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
               <CheckCircle className="w-6 h-6 text-primary" />
             </div>
@@ -149,7 +149,7 @@ export default function CertificatesPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: (yearIndex * 0.1) + (index * 0.05) }}
-                  className="glassmorphism-card group hover:border-primary/30 transition-all duration-300"
+                  className="glassmorphism-card group hover:shadow-md transition-all duration-300 block-hover-border"
                 >
                   {/* Certificate Image */}
                   {certificate.certificateImage && (
@@ -253,7 +253,7 @@ export default function CertificatesPage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="glassmorphism-card text-center max-w-4xl mx-auto"
+          className="glassmorphism-card text-center max-w-4xl mx-auto block-hover-border"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-secondary">
             Commitment to <span className="text-secondary">Excellence</span>

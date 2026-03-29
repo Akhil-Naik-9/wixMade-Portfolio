@@ -73,7 +73,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="glassmorphism-card">
+            <div className="glassmorphism-card block-hover-border">
               <Image
                 src="https://static.wixstatic.com/media/e6a693_b4b0f7ce9f5d47ecb63841098e35fdaa~mv2.jpg"
                 alt="Akhil Nenavath - Full Stack Developer"
@@ -121,7 +121,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glassmorphism-card"
+              className="glassmorphism-card block-hover-border"
             >
               <h3 className="font-heading text-xl font-semibold mb-4 capitalize text-secondary">
                 {category.replace(/([A-Z])/g, ' $1').trim()}
@@ -161,7 +161,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="glassmorphism-card"
+            className="glassmorphism-card block-hover-border"
           >
             <h3 className="font-heading text-2xl font-semibold mb-4 text-secondary">
               Fresh Graduate & Aspiring Developer
@@ -185,7 +185,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="glassmorphism-card"
+            className="glassmorphism-card block-hover-border"
           >
             <h3 className="font-heading text-2xl font-semibold mb-4 text-secondary">
               What I'm Looking For
@@ -226,7 +226,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="glassmorphism-card"
+              className="glassmorphism-card block-hover-border"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
@@ -272,7 +272,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="glassmorphism-card text-center max-w-4xl mx-auto"
+          className="glassmorphism-card text-center max-w-4xl mx-auto block-hover-border"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-secondary">
             <span className="text-secondary">Beyond Coding</span> / <span className="text-secondary">Hobbies</span>

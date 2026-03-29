@@ -32,3 +32,16 @@ html.dark section {
   @apply bg-gray-900 text-gray-100;
 }
 
+/* Block hover border effect */
+.block-hover-border {
+  @apply transition-all duration-200;
+}
+
+.block-hover-border:hover {
+  @apply border-black;
+}
+
+html.dark .block-hover-border:hover {
+  @apply border-white;
+}
+
