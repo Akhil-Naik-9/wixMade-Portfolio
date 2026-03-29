@@ -70,11 +70,8 @@ export default function ProjectsPage() {
     });
   };
 
-  const getProjectImageUrl = (projectName: string | undefined): string => {
-    if (!projectName) {
-      return "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
-    }
-    return projectName ? `https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192` : "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
+  const getProjectImageUrl = (projectImage: string | undefined): string => {
+    return projectImage || "https://static.wixstatic.com/media/e6a693_0984e99a2417425da9ad38ef4be8f3c6~mv2.png?originWidth=384&originHeight=192";
   };
 
   if (isLoading) {
@@ -163,7 +160,7 @@ export default function ProjectsPage() {
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-xl mb-6">
                 <Image
-                  src={getProjectImageUrl(project.projectName)}
+                  src={getProjectImageUrl(project.projectImage)}
                   alt={project.projectName || 'Project'}
                   width={400}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
